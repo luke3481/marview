@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   PageContainer,
   Overlay,
@@ -13,9 +14,9 @@ function Home() {
       <Overlay />
       <Title>Marview</Title>
       <Subtitle>The Future of Maritime Navigation</Subtitle>
-      <a href="">
+      <Link to="/signup">
         <Demo>Schedule a Demo</Demo>
-      </a>
+      </Link>
     </PageContainer>
   );
 }

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Blog() {
-  return <h1>Blog here</h1>;
+  return <div id="windy"></div>;
 }
 
 export default Blog;
