@@ -2,9 +2,11 @@ import styled from "styled-components";
 import ship_topview from "../imgs/ship_topview.jpg";
 
 export const PageContainer = styled.div`
-  position: relative;
+  background-color: #f8f8f8;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -48,7 +50,7 @@ export const Demo = styled.button`
   z-index: 1;
   color: white;
   background-color: #00008b;
-  border-color: #00008b;
+  // border-color: #00008b;
   padding: 10px;
   border-radius: 4px;
   font-size: 1rem;

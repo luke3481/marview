@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const PageContainer = styled.div`
   background-color: #f8f8f8;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TeamContainer = styled.div`
