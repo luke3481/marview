@@ -1,7 +1,17 @@
 import React from "react";
 import { Nav, NavLink, NavMenu, Logo } from "./NavbarStyle";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Navbar() {
+  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
+  const logoutWithRedirect = () =>
+    logout({
+      logoutParams: {
+        returnTo: window.location.origin,
+      },
+    });
+
   return (
     <>
       <Nav>
@@ -19,8 +29,8 @@ function Navbar() {
           <NavLink to="/blog" activeStyle>
             Blog
           </NavLink>
-          <NavLink to="/sign-up" activeStyle>
-            Sign Up
+          <NavLink to="/profile" activeStyle>
+            Profile
           </NavLink>
         </NavMenu>
       </Nav>
