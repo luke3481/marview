@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { PageContainer, Title } from "./solution_style.js";
+import { PageContainer, Title } from "./styles/solution_style.js";
 
 function Solution() {
   return (

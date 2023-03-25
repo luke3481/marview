@@ -6,7 +6,7 @@ import {
   Title,
   Subtitle,
   Demo,
-} from "./index_style.js";
+} from "./styles/index_style.js";
 
 function Home() {
   return (

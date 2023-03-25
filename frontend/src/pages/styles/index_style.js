@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ship_topview from "../imgs/ship_topview.jpg";
+import ship_topview from "../../imgs/ship_topview.jpg";
 
 export const PageContainer = styled.div`
   background-color: #f8f8f8;

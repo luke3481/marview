@@ -7,7 +7,7 @@ import {
   Photo,
   Name,
   Position,
-} from "./about_style.js";
+} from "./styles/about_style.js";
 import ericPhoto from "../imgs/Eric.jpg";
 import brianPhoto from "../imgs/Brian.jpeg";
 import lukePhoto from "../imgs/Luke.jpeg";
