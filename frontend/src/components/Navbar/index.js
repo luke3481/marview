@@ -21,13 +21,16 @@ function Navbar() {
             Home
           </NavLink>
           <NavLink to="/solution" activeStyle>
-            Solution
+            Product
           </NavLink>
           <NavLink to="/about" activeStyle>
             About
           </NavLink>
           <NavLink to="/blog" activeStyle>
             Blog
+          </NavLink>
+          <NavLink to="/contact" activeStyle>
+            Contact
           </NavLink>
           <NavLink to="/profile" activeStyle>
             Profile

@@ -31,22 +31,25 @@ const members = [
   {
     name: "Luke Birch",
     photo: lukePhoto,
-    position: "CPO",
+    position: "CTO",
     linkedin: "https://www.linkedin.com/in/luke-birch/",
   },
   {
     name: "Bill Lennon",
     photo: billPhoto,
+    position: "Business Development",
     linkedin: "https://www.linkedin.com/in/bill-lennon/",
   },
   {
     name: "Trey Grizzard",
     photo: treyPhoto,
+    position: "Engineering",
     linkedin: "https://www.linkedin.com/in/trey-grizzard/",
   },
   {
     name: "Will Schwieder",
     photo: willPhoto,
+    position: "Engineering",
     linkedin: "https://www.linkedin.com/in/willschwieder/",
   },
 ];

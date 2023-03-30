@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const PageContainer = styled.div`
   background-color: #f8f8f8;
-  min-height: 100%;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
 `;
@@ -22,7 +23,6 @@ export const Title = styled.h3`
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
-  padding-top: 2rem;
 `;
 
 export const Member = styled.div`

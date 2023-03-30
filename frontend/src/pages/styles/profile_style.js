@@ -22,7 +22,6 @@ export const Title = styled.h3`
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
-  padding-top: 2rem;
 `;
 
 export const Button = styled.button`

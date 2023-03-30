@@ -14,7 +14,7 @@ function Home() {
       <Overlay />
       <Title>Marview</Title>
       <Subtitle>The Future of Maritime Navigation</Subtitle>
-      <Link to="/signup">
+      <Link to="/profile">
         <Demo>Schedule a Demo</Demo>
       </Link>
     </PageContainer>

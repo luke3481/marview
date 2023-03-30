@@ -3,25 +3,26 @@ import ship_topview from "../../imgs/ship_topview.jpg";
 
 export const PageContainer = styled.div`
   background-color: #f8f8f8;
-  min-height: 100%;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
-  position: relative;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-image: url(${ship_topview});
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 `;
 
 export const Overlay = styled.div`
   position: absolute;
-  top: 60;
+  top: 60px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 60px);
   background-color: rgba(255, 255, 255, 0.55);
+  overflow: hidden;
 `;
 
 export const Title = styled.h1`

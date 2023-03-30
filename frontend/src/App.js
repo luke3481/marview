@@ -7,6 +7,7 @@ import About from "./pages/about";
 import Blog from "./pages/blog";
 import Profile from "./pages/profile";
 import Solution from "./pages/solution";
+import Contact from "./pages/contact";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/solution" element={<Solution />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>

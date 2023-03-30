@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^2.0.1",
+    "@formspark/use-formspark": "^0.1.39",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -11,6 +12,7 @@
     "and": "^0.0.3",
     "bootstrap": "^5.2.3",
     "leaflet": "^1.9.3",
+    "leaflet.tilelayer.colorfilter": "^1.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fontawesome": "^1.7.1",
