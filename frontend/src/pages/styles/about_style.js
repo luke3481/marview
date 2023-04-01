@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const PageContainer = styled.div`
   background-color: #f8f8f8;
-  margin-top: 60px;
-  height: calc(100vh - 60px);
+  // margin-top: 60px;
+  // height: calc(100vh - 60px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
 `;

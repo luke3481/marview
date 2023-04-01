@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
-import Blog from "./pages/blog";
+import Roadmap from "./pages/roadmap";
 import Profile from "./pages/profile";
-import Solution from "./pages/solution";
+import Product from "./pages/product";
 import Contact from "./pages/contact";
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/solution" element={<Solution />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>

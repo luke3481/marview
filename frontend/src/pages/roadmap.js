@@ -6,13 +6,13 @@ import {
   Button,
 } from "./styles/profile_style.js";
 
-function Blog() {
+function Roadmap() {
   return (
     <PageContainer>
-      <Title>Blog</Title>
+      <Title>Product Roadmap</Title>
       {/* <ProfileContainer></ProfileContainer> */}
     </PageContainer>
   );
 }
 
-export default Blog;
+export default Roadmap;

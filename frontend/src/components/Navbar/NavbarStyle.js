@@ -6,20 +6,21 @@ import marview_logo from "../../imgs/marview_logo.png";
 export const Nav = styled.nav`
   position: fixed;
   background: #ffffff;
-  height: 60px;
   display: grid;
+  grid-template-columns: 200px auto 100px;
+  grid-template-rows: 60px;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
-  grid-template-columns: 200px auto;
-  // padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12;
 `;
 
 export const NavLink = styled(Link)`
   color: #00008b;
+  font-weight: bold;
   text-decoration: none;
-  padding: 1rem;
+  padding: 2rem;
   cursor: pointer;
   &.active {
     color: #4d4dff;
@@ -46,17 +47,15 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   grid-column-start: 2;
   display: flex;
-  justify-content: center;
-  align-items: stretch;
-  white-space: nowrap;
-  */ @media screen and (max-width: 768px) {
+  justify-content: flex-end;
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 export const Logo = styled(Link)`
   grid-column-start: 1;
-  padding-left: 0.5rem;
   content: url(${marview_logo});
-  width: 100%;
+  height: 60%;
+  margin-left: 10px;
 `;

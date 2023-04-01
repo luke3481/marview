@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const PageContainer = styled.div`
   // margin-top: 60px;
   // min-height: 100%;
-  height: calc(100vh - 60px);
+  // height: calc(100vh - 60px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: #f8f8f8;
