@@ -5,19 +5,49 @@ import {
   ZoomControl,
   LayersControl,
   LayerGroup,
-  Circle,
+  Popup,
 } from "react-leaflet";
 import { PageContainer, MapTileLayer } from "./styles/product_style.js";
 import TemperatureLegend from "../components/legend_temp.js";
 
+// CODE BELOW CAN BE USED TO CREATE A DYNAMIC RECTANGLE ON MAP
+
+// import {
+//   createElementObject,
+//   createPathComponent,
+//   extendContext,
+// } from "@react-leaflet/core";
+// import L from "leaflet";
+
+// function getBounds(props) {
+//   return L.latLng(props.center).toBounds(props.size);
+// }
+
+// function createSquare(props, context) {
+//   const square = new L.Rectangle(getBounds(props));
+//   return createElementObject(
+//     square,
+//     extendContext(context, { overlayContainer: square })
+//   );
+// }
+
+// function updateSquare(instance, props, prevProps) {
+//   if (props.center !== prevProps.center || props.size !== prevProps.size) {
+//     instance.setBounds(getBounds(props));
+//   }
+// }
+
+// const Square = createPathComponent(createSquare, updateSquare);
+
 function Product() {
   // const API_KEY = "06aac0fd4ba239a20d824ef89602f311"; /* api key that works */
   const API_KEY = "e6d8c9c20269bd6d193a610ab4f7d761"; /* my api key */
+  const center = [39.1, -76.1];
 
   return (
     <PageContainer>
       <MapContainer
-        center={[39.1, -76.1]}
+        center={center}
         zoom={6}
         scrollWheelZoom={true}
         zoomControl={false}
@@ -57,6 +87,9 @@ function Product() {
         </LayersControl>
         <ZoomControl position="topright" />
         <TemperatureLegend />
+        {/* <Square center={center} size={100000}>
+          <Popup>Hello Popup</Popup>
+        </Square> */}
       </MapContainer>
     </PageContainer>
   );

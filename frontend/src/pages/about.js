@@ -11,9 +11,12 @@ import {
 import ericPhoto from "../imgs/Eric.jpg";
 import brianPhoto from "../imgs/Brian.jpeg";
 import lukePhoto from "../imgs/Luke.jpeg";
-import willPhoto from "../imgs/Will.jpeg";
+import nickPhoto from "../imgs/Nick.jpg";
 import billPhoto from "../imgs/Bill.jpeg";
 import treyPhoto from "../imgs/Trey.jpeg";
+import johnPhoto from "../imgs/John.jpg";
+import weiPhoto from "../imgs/Wei.jpeg";
+import darrenPhoto from "../imgs/Darren.jpeg";
 
 const members = [
   {
@@ -41,16 +44,34 @@ const members = [
     linkedin: "https://www.linkedin.com/in/bill-lennon/",
   },
   {
+    name: "John Hart",
+    photo: johnPhoto,
+    position: "Business Development",
+    linkedin: "https://www.linkedin.com/in/john-hart-33435514b/",
+  },
+  {
+    name: "Nick Macius",
+    photo: nickPhoto,
+    position: "Business Development",
+    linkedin: "https://www.linkedin.com/in/nick-macius-78a831110/",
+  },
+  {
     name: "Trey Grizzard",
     photo: treyPhoto,
     position: "Engineering",
     linkedin: "https://www.linkedin.com/in/trey-grizzard/",
   },
   {
-    name: "Will Schwieder",
-    photo: willPhoto,
+    name: "Wei Cai",
+    photo: weiPhoto,
     position: "Engineering",
-    linkedin: "https://www.linkedin.com/in/willschwieder/",
+    linkedin: "https://linkedin.com/in/wei-cai-5b7159230/",
+  },
+  {
+    name: "Darren Colby",
+    photo: darrenPhoto,
+    position: "Engineering",
+    linkedin: "https://www.linkedin.com/in/darren-colby/",
   },
 ];
 
