@@ -14,6 +14,9 @@ import lukePhoto from "../imgs/Luke.jpeg";
 import willPhoto from "../imgs/Will.jpeg";
 import billPhoto from "../imgs/Bill.jpeg";
 import treyPhoto from "../imgs/Trey.jpeg";
+import weiPhoto from "../imgs/Wei.jpeg";
+import darrenPhoto from "../imgs/Darren.jpeg";
+import johnPhoto from "../imgs/John.jpg";
 
 const members = [
   {
@@ -41,6 +44,12 @@ const members = [
     linkedin: "https://www.linkedin.com/in/bill-lennon/",
   },
   {
+    name: "John Hart",
+    photo: johnPhoto,
+    position: "Business Development",
+    linkedin: "https://www.linkedin.com/in/john-hart-33435514b/",
+  },
+  {
     name: "Trey Grizzard",
     photo: treyPhoto,
     position: "Engineering",
@@ -51,6 +60,18 @@ const members = [
     photo: willPhoto,
     position: "Engineering",
     linkedin: "https://www.linkedin.com/in/willschwieder/",
+  },
+  {
+    name: "Darren Colby",
+    photo: darrenPhoto,
+    position: "Engineering",
+    linkedin: "https://www.linkedin.com/in/darren-colby/",
+  },
+  {
+    name: "Wei Cai",
+    photo: weiPhoto,
+    position: "Engineering",
+    linkedin: "https://linkedin.com/in/wei-cai-5b7159230/",
   },
 ];
 
