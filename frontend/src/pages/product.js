@@ -6,9 +6,13 @@ import {
   LayersControl,
   LayerGroup,
   Popup,
+  FeatureGroup,
+  Marker,
 } from "react-leaflet";
+import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 import { PageContainer, MapTileLayer } from "./styles/product_style.js";
 import TemperatureLegend from "../components/legend_temp.js";
+import { testPoints } from "./testpoints.js";
 
 // CODE BELOW CAN BE USED TO CREATE A DYNAMIC RECTANGLE ON MAP
 
@@ -82,6 +86,16 @@ function Product() {
           <LayersControl.Overlay name="Pressure">
             <TileLayer
               url={`https://tile.openweathermap.org/map/pressure_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
+            />
+          </LayersControl.Overlay>
+          <LayersControl.Overlay name="Heatmap">
+            <HeatmapLayer
+              // fitBoundsOnLoad
+              // fitBoundsOnUpdate
+              points={testPoints}
+              longitudeExtractor={(m) => m[1]}
+              latitudeExtractor={(m) => m[0]}
+              intensityExtractor={(m) => parseFloat(m[2])}
             />
           </LayersControl.Overlay>
         </LayersControl>
