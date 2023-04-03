@@ -4,8 +4,10 @@ import {
   TileLayer,
   ZoomControl,
   LayersControl,
+  LayerGroup,
+  Circle,
 } from "react-leaflet";
-import { PageContainer, MapTileLayer, Legend } from "./styles/product_style.js";
+import { PageContainer, MapTileLayer } from "./styles/product_style.js";
 import TemperatureLegend from "../components/legend_temp.js";
 
 function Product() {
@@ -36,12 +38,11 @@ function Product() {
             />
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Temperature">
-            <TileLayer
-              url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
-            />
-            <Legend>
-              <TemperatureLegend />
-            </Legend>
+            <LayerGroup>
+              <TileLayer
+                url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
+              />
+            </LayerGroup>
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Wind">
             <TileLayer
@@ -55,6 +56,7 @@ function Product() {
           </LayersControl.Overlay>
         </LayersControl>
         <ZoomControl position="topright" />
+        <TemperatureLegend />
       </MapContainer>
     </PageContainer>
   );

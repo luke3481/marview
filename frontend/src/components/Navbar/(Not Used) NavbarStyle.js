@@ -30,6 +30,44 @@ export const NavLink = styled(Link)`
   }
 `;
 
+export const DropDownBox = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+`;
+
+export const DropDownContent = styled(Link)`
+  color: #00008b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  &:hover {
+    color: #4d4dff;
+  }
+`;
+
+export const DropdownLink = styled(Link)`
+  color: #00008b;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2rem;
+  cursor: pointer;
+  position: relative;
+
+  &.active {
+    color: #4d4dff;
+  }
+
+  &:hover + ${DropDownBox} {
+    display: inline-block;
+  }
+`;
+
 export const Bars = styled(FaBars)`
   display: none;
   color: #808080;

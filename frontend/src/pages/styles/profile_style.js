@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  margin-top: 60px;
-  min-height: 100%;
+  // margin-top: 60px;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: #f8f8f8;
 `;
 
 export const ProfileContainer = styled.div`
