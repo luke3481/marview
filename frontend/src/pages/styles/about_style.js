@@ -18,7 +18,6 @@ export const TeamContainer = styled.div`
 `;
 
 export const Title = styled.h3`
-  position: relative;
   color: #00008b;
   font-size: 4rem;
   font-weight: bold;

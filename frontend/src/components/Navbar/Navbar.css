@@ -1,4 +1,5 @@
 .navbar {
+  position: relative;
   background: #ffffff;
   height: 60px;
   display: flex;
@@ -7,29 +8,22 @@
   font-size: 1.2rem;
 }
 
-.navbar-logo {
+.logo {
   content: url(../../imgs/marview_logo.png);
   height: 60%;
   margin-left: 10px;
 }
 
-.fa-firstdraft {
-  margin-left: 0.5rem;
-  font-size: 1.6rem;
-}
-
-.nav-menu {
+.nav-side-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
-  grid-gap: 10px;
-  list-style: none;
-  text-align: center;
-  width: 100%;
+  gap: 0 10px;
+  width: 100vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 35px;
 }
 
-.nav-item {
+.nav-items {
   display: flex;
   align-items: center;
   height: 60px;
@@ -38,20 +32,20 @@
 .nav-links {
   color: #00008b;
   font-weight: bold;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
+  text-decoration: None;
+  padding: 8px 20px;
+  transition: all 0.3s ease-out;
 }
 
 .nav-links:hover {
-  transition: all 0.2s ease-out;
   color: #4d4dff;
 }
 
 .fa-bars {
-  color: #4d4dff;
+  color: #00008b;
 }
 
-.nav-links-mobile {
+.nav-links-button {
   display: none;
 }
 
@@ -59,85 +53,64 @@
   display: none;
 }
 
-@media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-
-  .nav-menu {
+@media screen and (max-width: 1000px) {
+  .nav-side-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 90vh;
+    width: 250px;
+    height: calc(100vh - 60px);
     position: absolute;
-    top: 80px;
+    margin-top: 0;
+    top: 60px;
+    border: 2px solid #ececee;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
+    justify-content: flex-start;
   }
 
-  .nav-menu.active {
-    background: #242222;
+  .nav-side-menu.start {
+    background: #fff;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
   }
 
   .nav-links {
     text-align: center;
-    padding: 2rem;
     width: 100%;
+    color: #00008b;
     display: table;
+    transition: 0s;
   }
 
   .nav-links:hover {
-    background-color: #1888ff;
-    border-radius: 0;
+    color: #4d4dff;
   }
 
-  .navbar-logo {
+  .logo {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
+    left: 1rem;
+    /* transform: translate(25%, 50%); */
   }
 
   .menu-icon {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    right: 1rem;
+    /* transform: translate(-100%, 60%); */
     font-size: 1.8rem;
     cursor: pointer;
   }
 
   .fa-times {
-    color: #fff;
+    color: #00008b;
     font-size: 2rem;
   }
 
-  .nav-links-mobile {
-    display: block;
-    text-align: center;
+  .nav-items {
+    height: auto;
+    align-self: center;
     padding: 1.5rem;
-    margin: 2rem auto;
-    border-radius: 4px;
-    width: 80%;
-    background: #1888ff;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-  }
-
-  .nav-links-mobile:hover {
-    background: #fff;
-    color: #1888ff;
-    transition: 250ms;
-  }
-
-  button {
-    display: none;
   }
 }
