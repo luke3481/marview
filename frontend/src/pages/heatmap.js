@@ -1,18 +1,8 @@
 import React from "react";
-import {
-  PageContainer,
-  ProfileContainer,
-  Title,
-  Button,
-} from "./styles/profile_style.js";
+import { PageContainer } from "./styles/heatmap_style.js";
 
-function HeatMap() {
-  return (
-    <PageContainer>
-      <Title>Heat Map</Title>
-      {/* <ProfileContainer></ProfileContainer> */}
-    </PageContainer>
-  );
+function Heatmap() {
+  return <PageContainer></PageContainer>;
 }
 
-export default HeatMap;
+export default Heatmap;

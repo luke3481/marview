@@ -2,31 +2,39 @@ import styled from "styled-components";
 import ship_topview from "../../imgs/ship_topview.jpg";
 
 export const PageContainer = styled.div`
-  background-color: #f8f8f8;
   height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(${ship_topview});
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
+  &::after {
+    content: "";
+    background: url(${ship_topview});
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 `;
 
-export const Overlay = styled.div`
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 60px);
-  background-color: rgba(255, 255, 255, 0.55);
-  overflow: hidden;
-`;
+// export const Overlay = styled.div`
+//   // position: absolute;
+//   top: 60px;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: rgba(255, 255, 255, 0.55);
+//   overflow: hidden;
+// `;
 
 export const Title = styled.h1`
-  position: relative;
-  z-index: 1;
+  // position: relative;
   color: #00008b;
   font-size: 5rem;
   font-weight: bold;
@@ -35,8 +43,7 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.h2`
-  position: relative;
-  z-index: 1;
+  // position: relative;
   color: #00008b;
   // font-size: 5rem;
   font-weight: bold;
@@ -46,8 +53,7 @@ export const Subtitle = styled.h2`
 
 export const Demo = styled.button`
   margin-top: 2rem;
-  position: relative;
-  z-index: 1;
+  // position: relative;
   color: white;
   background-color: #00008b;
   // border-color: #00008b;

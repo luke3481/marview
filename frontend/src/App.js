@@ -9,7 +9,7 @@ import Profile from "./pages/profile";
 import Product from "./pages/product";
 import Contact from "./pages/contact";
 import NavChart from "./pages/navchart";
-import HeatMap from "./pages/heatmap";
+import Heatmap from "./pages/heatmap";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/navchart" element={<NavChart />} />
-        <Route path="/heatmap" element={<HeatMap />} />
+        <Route path="/heatmap" element={<Heatmap />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>

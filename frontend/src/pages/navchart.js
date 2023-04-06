@@ -1,18 +1,8 @@
 import React from "react";
-import {
-  PageContainer,
-  ProfileContainer,
-  Title,
-  Button,
-} from "./styles/profile_style.js";
+import { PageContainer } from "./styles/navchart_style.js";
 
 function NavChart() {
-  return (
-    <PageContainer>
-      <Title>NavChart</Title>
-      {/* <ProfileContainer></ProfileContainer> */}
-    </PageContainer>
-  );
+  return <PageContainer></PageContainer>;
 }
 
 export default NavChart;

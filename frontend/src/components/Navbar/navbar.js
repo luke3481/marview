@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LoginButton from "./login";
+import LoginButton from "../../components/Navbar/login";
 import LogoutButton from "./logout";
 import { NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -11,7 +11,7 @@ function Navbar() {
   const [dropdown, setDropdown] = useState(false);
   const changeClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const { isAuthenticated, isLoading } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   const onMouseEnter = () => {
     setDropdown(true);
@@ -53,6 +53,16 @@ function Navbar() {
             </li>
             <li className="nav-items">
               <NavLink
+                to="/roadmap"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                {" "}
+                Roadmap
+              </NavLink>
+            </li>
+            <li className="nav-items">
+              <NavLink
                 to="/contact"
                 className="nav-links"
                 onClick={closeMobileMenu}
@@ -63,18 +73,15 @@ function Navbar() {
             </li>
             <li className="nav-items">
               {!isAuthenticated && <LoginButton />}
-              {isAuthenticated && <LogoutButton />}
+              {/* {isAuthenticated && <LogoutButton />} */}
+              {isAuthenticated && (
+                <NavLink to="/profile" className="profile-icon">
+                  <i class="fa fa-user-circle" aria-hidden="true">
+                    <i className="fas fa-caret-down" />
+                  </i>
+                </NavLink>
+              )}
             </li>
-            {/* <li className="nav-items">
-              <NavLink
-                to="/profile"
-                className="nav-links-button"
-                onClick={closeMobileMenu}
-              >
-                {" "}
-                Test{" "}
-              </NavLink>
-            </li> */}
           </ul>
         </nav>
       </section>

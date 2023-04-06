@@ -4,11 +4,17 @@
   top: 60px;
   list-style: none;
   text-align: start;
+  z-index: 1000;
 }
 
 .dropdown-menu li {
   background: #fff;
   cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
 }
 
 /* .dropdown-menu li:hover {
@@ -37,5 +43,11 @@
     top: 20px;
     list-style: none;
     text-align: start;
+    z-index: 1000;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
   }
 }

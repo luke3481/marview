@@ -11,7 +11,7 @@ import {
 function Home() {
   return (
     <PageContainer>
-      <Overlay />
+      {/* <Overlay /> */}
       <Title>Marview</Title>
       <Subtitle>The Future of Maritime Navigation</Subtitle>
       <Link to="/profile">

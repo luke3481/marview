@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import LoginButton from "../components/login";
-// import LogoutButton from "../components/logout";
-import { BrowserRouter } from "react-router-dom";
-import { Auth0Provider } from "@auth0/auth0-react";
+import LoginButton from "./../components/Navbar/login";
+import LogoutButton from "./../components/Navbar/logout";
 import {
   PageContainer,
   ProfileContainer,
@@ -24,7 +22,7 @@ function Profile() {
       <PageContainer>
         <ProfileContainer>
           <Title>Profile</Title>
-          {/* <LoginButton /> */}
+          <LoginButton />
         </ProfileContainer>
       </PageContainer>
     );
@@ -41,7 +39,7 @@ function Profile() {
             <p>{user.email}</p>
           </div>
         )}
-        {/* <LogoutButton /> */}
+        <LogoutButton />
       </ProfileContainer>
     </PageContainer>
   );

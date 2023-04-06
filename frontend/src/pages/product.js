@@ -52,7 +52,7 @@ function Product() {
     <PageContainer>
       <MapContainer
         center={center}
-        zoom={6}
+        zoom={7}
         scrollWheelZoom={true}
         zoomControl={false}
       >
@@ -100,7 +100,7 @@ function Product() {
           </LayersControl.Overlay>
         </LayersControl>
         <ZoomControl position="topright" />
-        <TemperatureLegend />
+        {/* <TemperatureLegend /> */}
         {/* <Square center={center} size={100000}>
           <Popup>Hello Popup</Popup>
         </Square> */}

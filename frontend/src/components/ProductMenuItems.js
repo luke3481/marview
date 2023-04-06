@@ -5,13 +5,13 @@ export const ProductMenuItems = [
     cName: "dropdown-link",
   },
   {
-    title: "Nav Chart",
-    path: "/navchart",
+    title: "Heat Map",
+    path: "/heatmap",
     cName: "dropdown-link",
   },
   {
-    title: "Heat Map",
-    path: "/heatmap",
+    title: "Nav Chart",
+    path: "/navchart",
     cName: "dropdown-link",
   },
 ];
