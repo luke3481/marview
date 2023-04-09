@@ -29,11 +29,12 @@ ul {
   display: grid;
   text-decoration: none;
   color: #00008b;
-  padding: 15px;
+  padding: 10px;
 }
 
 .menu-items:hover {
   color: #4d4dff;
+  background: #e6e6ff;
 }
 
 @media screen and (max-width: 1000px) {

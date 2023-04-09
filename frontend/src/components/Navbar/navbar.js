@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import LoginButton from "../../components/Navbar/login";
-import LogoutButton from "./logout";
 import { NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./Navbar.css";
 import ProductMenu from "../productMenu";
+import ProfileMenu from "../profileMenu";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [profiledropdown, setProfileDropdown] = useState(false);
   const changeClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const { isAuthenticated } = useAuth0();
@@ -19,6 +20,14 @@ function Navbar() {
 
   const onMouseLeave = () => {
     setDropdown(false);
+  };
+
+  const onMouseProfileEnter = () => {
+    setProfileDropdown(true);
+  };
+
+  const onMouseProfileLeave = () => {
+    setProfileDropdown(false);
   };
 
   return (
@@ -71,14 +80,19 @@ function Navbar() {
                 Contact
               </NavLink>
             </li>
-            <li className="nav-items">
+            <li
+              className="nav-items"
+              onClick={onMouseProfileEnter}
+              onMouseLeave={onMouseProfileLeave}
+            >
               {!isAuthenticated && <LoginButton />}
               {/* {isAuthenticated && <LogoutButton />} */}
               {isAuthenticated && (
-                <NavLink to="/profile" className="profile-icon">
+                <NavLink className="nav-links">
                   <i class="fa fa-user-circle" aria-hidden="true">
                     <i className="fas fa-caret-down" />
                   </i>
+                  {profiledropdown && <ProfileMenu />}
                 </NavLink>
               )}
             </li>

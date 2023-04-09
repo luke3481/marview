@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const StyledButton = styled(Link)`
-  padding: 4px 25px;
-  border-radius: 20px;
-  font-size: 1.3 rem;
+  padding: 3px 25px;
+  border-radius: 25px;
+  font-size: 1 rem;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
