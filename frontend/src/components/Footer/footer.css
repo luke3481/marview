@@ -7,9 +7,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .container {
@@ -33,7 +34,7 @@ ul {
 }
 
 li {
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 a {
@@ -50,7 +51,7 @@ a:hover {
 }
 
 .social-media a {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   color: #fff;
 }
 

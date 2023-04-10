@@ -86,7 +86,6 @@ function Navbar() {
               onMouseLeave={onMouseProfileLeave}
             >
               {!isAuthenticated && <LoginButton />}
-              {/* {isAuthenticated && <LogoutButton />} */}
               {isAuthenticated && (
                 <NavLink className="nav-links">
                   <i class="fa fa-user-circle" aria-hidden="true"></i>

@@ -88,7 +88,7 @@ function Contact() {
             />
 
             <FormButton type="submit" disabled={submitting}>
-              {submitting ? "Submitting..." : "Submit"}
+              {submitting ? "Submitting..." : "Send Message"}
             </FormButton>
           </ContactForm>
         )}

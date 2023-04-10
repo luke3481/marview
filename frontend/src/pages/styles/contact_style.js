@@ -7,6 +7,7 @@ export const PageContainer = styled.div`
   justify-content: center;
   align_items: center;
   background-image: url(${ship_topview});
+  // background-color: #f8f8f8;
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -18,11 +19,11 @@ export const ContactContainer = styled.div`
   padding: 20px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h4`
   position: relative;
   color: #00008b;
   // color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
@@ -71,14 +72,14 @@ export const FormTextArea = styled.textarea`
 `;
 
 export const FormButton = styled.button`
-  padding: 10px 20px;
-  font-size: 20px;
-  background-color: #00008b;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: #4d4dff;
   color: #fff;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
-  width: 100px;
+  width: 150px;
   display: flex;
   margin-left: auto;
 

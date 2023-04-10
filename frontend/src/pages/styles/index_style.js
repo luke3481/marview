@@ -4,7 +4,7 @@ import ship_topview from "../../imgs/ship_topview.jpg";
 import landing_video from "../../imgs/landing_video.mov";
 
 export const PageContainer = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   // align-items: center;

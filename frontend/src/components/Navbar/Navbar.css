@@ -79,7 +79,7 @@
     margin-top: 0;
     top: 60px;
     border: 2px solid #ececee;
-    right: -100%;
+    left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
     justify-content: flex-start;
@@ -87,7 +87,7 @@
 
   .nav-side-menu.start {
     background: #fff;
-    right: 0;
+    left: 0;
     opacity: 1;
     transition: all 0.5s ease;
   }
