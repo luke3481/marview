@@ -35,7 +35,7 @@ export const Title = styled.h3`
   color: #fff;
   font-size: 5rem;
   text-align: left;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 0;
 `;
 
@@ -57,7 +57,7 @@ export const Video = styled.video`
   height: auto;
   z-index: -1;
   // filter: opacity(60%);
-  // filter: brightness(0.7);
+  // filter: invert(100%) hue-rotate(180deg) brightness(0.6);
 `;
 
 export const Demo = styled(Link)`

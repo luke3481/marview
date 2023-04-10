@@ -82,16 +82,15 @@ function Navbar() {
             </li>
             <li
               className="nav-items"
-              onClick={onMouseProfileEnter}
+              onMouseEnter={onMouseProfileEnter}
               onMouseLeave={onMouseProfileLeave}
             >
               {!isAuthenticated && <LoginButton />}
               {/* {isAuthenticated && <LogoutButton />} */}
               {isAuthenticated && (
                 <NavLink className="nav-links">
-                  <i class="fa fa-user-circle" aria-hidden="true">
-                    <i className="fas fa-caret-down" />
-                  </i>
+                  <i class="fa fa-user-circle" aria-hidden="true"></i>
+                  <i className="fas fa-caret-down" />
                   {profiledropdown && <ProfileMenu />}
                 </NavLink>
               )}

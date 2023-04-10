@@ -1,11 +1,13 @@
 .navbar {
-  position: relative;
+  position: fixed;
+  width: 100%;
   background: #ffffff;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  z-index: 2000;
 }
 
 .logo {
@@ -39,6 +41,10 @@
 }
 
 .nav-links:hover {
+  color: #4d4dff;
+}
+
+.nav-links:hover > .fa-caret-down {
   color: #4d4dff;
 }
 
