@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import ship_topview from "../../imgs/background.jpg";
 
 export const PageContainer = styled.div`
-  // margin-top: 60px;
-  // min-height: 100%;
-  // height: calc(100vh - 60px);
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: #f8f8f8;
+  align_items: center;
+  background-image: url(${ship_topview});
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 `;
 
 export const ContactContainer = styled.div`
@@ -19,6 +21,7 @@ export const ContactContainer = styled.div`
 export const Title = styled.h3`
   position: relative;
   color: #00008b;
+  // color: #fff;
   font-size: 4rem;
   font-weight: bold;
   text-align: center;
@@ -34,6 +37,7 @@ export const FormLabel = styled.label`
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 5px;
+  display: none;
 `;
 
 export const FormInput = styled.input`
@@ -43,6 +47,8 @@ export const FormInput = styled.input`
   border-radius: 5px;
   margin-bottom: 15px;
   font: inherit;
+  display: flex;
+  align-self: right;
 
   &:focus {
     outline: none;
@@ -66,15 +72,19 @@ export const FormTextArea = styled.textarea`
 
 export const FormButton = styled.button`
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
+  font-size: 20px;
+  background-color: #00008b;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
+  width: 100px;
+  display: flex;
+  margin-left: auto;
 
   &:hover {
-    background-color: #0069d9;
+    background-color: #fff;
+    color: #00008b;
   }
 
   &:disabled {
