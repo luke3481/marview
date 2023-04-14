@@ -29,12 +29,13 @@
   display: flex;
   align-items: center;
   height: 60px;
+  font-size: 1rem;
 }
 
 .nav-links {
   color: #00008b;
   font-weight: 600;
-  font-size: 1rem;
+
   text-decoration: None;
   padding: 8px 20px;
   transition: all 0.3s ease-out;

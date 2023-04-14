@@ -21,13 +21,14 @@ function Contact() {
 
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [subject, setSubject] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [company, setCompany] = useState("");
   const [showMessage, setShowMessage] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await submit({ name, email, subject, message });
+    await submit({ firstname, lastname, email, company, message });
     setShowMessage(true);
   };
 
@@ -42,51 +43,52 @@ function Contact() {
           </div>
         ) : (
           <ContactForm onSubmit={onSubmit}>
-            <FormLabel htmlFor="name">Name</FormLabel>
-            <FormInput
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-
             <FormLabel htmlFor="email">Email</FormLabel>
             <FormInput
               type="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-
-            <FormLabel htmlFor="subject">Subject</FormLabel>
+            <FormLabel htmlFor="firstname">First Name</FormLabel>
             <FormInput
               type="text"
-              id="subject"
-              name="subject"
-              placeholder="Enter subject"
+              id="firstname"
+              name="firstname"
               required
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+              value={firstname}
+              onChange={(e) => setFirstName(e.target.value)}
             />
-
+            <FormLabel htmlFor="lastname">Last Name</FormLabel>
+            <FormInput
+              type="text"
+              id="lastname"
+              name="lastname"
+              required
+              value={lastname}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            <FormLabel htmlFor="company">Company</FormLabel>
+            <FormInput
+              type="text"
+              id="company"
+              name="company"
+              required
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+            />
             <FormLabel htmlFor="message">Message</FormLabel>
             <FormTextArea
               id="message"
               name="message"
-              placeholder="Enter your message"
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={8}
               cols={50}
             />
-
             <FormButton type="submit" disabled={submitting}>
               {submitting ? "Submitting..." : "Send Message"}
             </FormButton>

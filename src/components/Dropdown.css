@@ -2,6 +2,7 @@
   width: auto;
   position: absolute;
   top: 60px;
+  width: 125px;
   list-style: none;
   text-align: start;
   z-index: 1000;

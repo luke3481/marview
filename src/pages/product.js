@@ -14,13 +14,13 @@ import TemperatureLegend from "../components/legend_temp.js";
 function Product() {
   // const API_KEY = "06aac0fd4ba239a20d824ef89602f311"; /* api key that works */
   const API_KEY = "e6d8c9c20269bd6d193a610ab4f7d761"; /* my api key */
-  const center = [39.1, -76.1];
+  const center = [38.1, -76.1];
 
   return (
     <PageContainer>
       <MapContainer
         center={center}
-        zoom={7}
+        zoom={8}
         scrollWheelZoom={true}
         zoomControl={false}
         crossOrigin={true}
@@ -33,7 +33,7 @@ function Product() {
         <LayersControl position="topleft">
           <LayersControl.Overlay name="Precipitation">
             <TileLayer
-              url={`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
+              url={`https://tile.openweathermap.org/map/WND/{z}/{x}/{y}.png?appid=${API_KEY}`}
             />
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Clouds">
