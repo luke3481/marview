@@ -9,6 +9,20 @@ export const TemperatureLegendWrapper = styled.div`
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInOut 1s ease-out forwards;
+  opacity: 0;
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const ColorScale = styled.div`
@@ -17,14 +31,14 @@ export const ColorScale = styled.div`
   flex-direction: column-reverse;
   background: linear-gradient(
     to top,
-    rgba(130, 87, 219, 1) -30%,
-    rgba(32, 140, 236, 1) -20%,
-    rgba(32, 196, 232, 1) -10%,
-    rgba(35, 221, 221, 1) 0%,
-    rgba(194, 255, 40, 1) 10%,
-    rgba(255, 240, 40, 1) 20%,
-    rgba(255, 194, 40, 1) 25%,
-    rgba(252, 128, 20, 1) 30%
+    rgba(130, 87, 219, 1),
+    rgba(32, 140, 236, 1),
+    rgba(32, 196, 232, 1),
+    rgba(35, 221, 221, 1),
+    rgba(194, 255, 40, 1),
+    rgba(255, 240, 40, 1),
+    rgba(255, 194, 40, 1),
+    rgba(252, 128, 20, 1)
   );
 `;
 

@@ -3,6 +3,7 @@ import heatmap from "../../imgs/heatmap.png";
 
 export const PageContainer = styled.div`
   height: calc(100vh - 60px);
+  padding-top: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,4 +11,5 @@ export const PageContainer = styled.div`
   background: url(${heatmap});
   background-repeat: no-repeat;
   background-position: center;
+  // background-size: cover;
 `;

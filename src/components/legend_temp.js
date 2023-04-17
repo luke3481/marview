@@ -22,7 +22,7 @@ function TemperatureLegend() {
       <h3>Temperature</h3>
       <ColorScale>
         {temperatureStops.map((stop) => (
-          <StopLabel key={stop.temp} style={{ backgroundColor: stop.color }}>
+          <StopLabel key={stop.temp}>
             <LabelText>{stop.temp}°C</LabelText>
           </StopLabel>
         ))}

@@ -4,7 +4,8 @@ import ship_topview from "../../imgs/ship_topview.jpg";
 import landing_video from "../../imgs/landing_video.mov";
 
 export const PageContainer = styled.div`
-  height: 100vh;
+  min-height: calc(100vh - 60px);
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   // align-items: center;
@@ -37,6 +38,9 @@ export const Title = styled.h3`
   text-align: left;
   margin-top: 10%;
   margin-bottom: 0;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Subtitle = styled.h3`
@@ -45,6 +49,9 @@ export const Subtitle = styled.h3`
   text-align: left;
   margin-top: 0;
   margin-bottom: 0;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Video = styled.video`

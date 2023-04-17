@@ -13,3 +13,7 @@ export const MapTileLayer = styled(TileLayer)`
   filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3)
     brightness(0.7);
 `;
+
+export const AisTileLayer = styled(TileLayer)`
+  filter: brightness(0.9);
+`;
