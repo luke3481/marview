@@ -20,7 +20,7 @@ function Home() {
         <Title>The Future of</Title>
         <Subtitle>Maritime Navigation</Subtitle>
         <Demo to="/contact">Schedule a Demo</Demo>
-        <Video src={landing_video} autoPlay loop muted />
+        <Video src={landing_video} autoPlay loop muted playsinline />
       </HeadlineContainer>
     </PageContainer>
   );
