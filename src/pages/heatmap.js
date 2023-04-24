@@ -1,8 +1,12 @@
 import React from "react";
-import { PageContainer } from "./styles/heatmap_style.js";
+import { PageContainer, Title } from "./styles/heatmap_style.js";
 
 function Heatmap() {
-  return <PageContainer></PageContainer>;
+  return (
+    <PageContainer>
+      <Title>Coming Soon!</Title>
+    </PageContainer>
+  );
 }
 
 export default Heatmap;

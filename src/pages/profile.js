@@ -30,8 +30,8 @@ function Profile() {
 
   return (
     <PageContainer>
-      <Title>Profile</Title>
       <ProfileContainer>
+        <Title>Profile</Title>
         {isAuthenticated && (
           <div>
             <img src={user.picture} alt={user.name} />

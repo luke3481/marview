@@ -1,28 +1,20 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ship_topview from "../../imgs/ship_topview.jpg";
-import landing_video from "../../imgs/landing_video.mov";
 
 export const PageContainer = styled.div`
   min-height: calc(100vh - 60px);
   padding-top: 60px;
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  // &::after {
-  //   content: "";
-  //   // background: url(${ship_topview});
-  //   // background-size: cover;
-  //   background-position: center;
-  //   overflow: hidden;
-  //   opacity: 0.2;
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   position: absolute;
-  //   z-index: -1;
-  // }
+  @media screen and (max-width: 768px) {
+    background: url(${ship_topview});
+    background-postion: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 60px;
+  }
 `;
 
 export const HeadlineContainer = styled.div`
@@ -30,41 +22,33 @@ export const HeadlineContainer = styled.div`
   flex-direction: column;
   width: 60%;
   margin-left: 10%;
-`;
-
-export const Title = styled.h3`
-  color: #fff;
-  font-size: 5rem;
-  text-align: left;
-  margin-top: 10%;
-  margin-bottom: 0;
+  margin-top: 1%;
   @media screen and (max-width: 768px) {
-    font-size: 3rem;
+    width: 90%;
+    margin-top: 10%;
   }
 `;
 
-export const Subtitle = styled.h3`
+export const Title = styled.h1`
   color: #fff;
   font-size: 5rem;
   text-align: left;
-  margin-top: 0;
   margin-bottom: 0;
+  margin-top: 0;
   @media screen and (max-width: 768px) {
     font-size: 3rem;
   }
 `;
 
 export const Video = styled.video`
-  position: fixed;
-  left: 0;
-  top: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
   z-index: -1;
-  // filter: opacity(60%);
-  // filter: invert(100%) hue-rotate(180deg) brightness(0.6);
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Demo = styled(Link)`
@@ -88,9 +72,91 @@ export const Demo = styled(Link)`
   }
 `;
 
-export const ContentContainer = styled.div`
+export const Video2 = styled.video`
+  width: 60%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const ContentContainer1 = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    padding: 20px 0px 20px 0px;
+  }
+`;
+
+export const ContentContainer2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    padding: 20px 0px 20px 0px;
+  }
+`;
+
+export const ContentContainer3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    padding: 20px 0px 20px 0px;
+  }
+`;
+
+export const SubContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
   margin-left: 10%;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+export const SubContainer2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const TextBody = styled.div`
+  display: flex;
+  align-items: center;
+  padding-right: 100px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    padding-right: 0px;
+  }
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+export const Subtitle = styled.h3`
+  color: black;
+  font-size: 2.5rem;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;

@@ -6,11 +6,11 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="text">© 2023 Marview. All rights reserved. </div>
-        <div className="social-media">
+        {/* <div className="social-media">
           <a href="#">
             <i className="fab fa-linkedin"></i>
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

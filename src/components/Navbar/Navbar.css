@@ -11,17 +11,18 @@
 }
 
 .logo {
-  content: url(../../imgs/marview_logo.png);
+  content: url(../../imgs/marview_new_logo.png);
   height: 60%;
+  position: absolute;
+  left: 10%;
 }
 
 .nav-side-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
   gap: 0 10px;
-  width: 70vw;
-  justify-content: end;
-  margin-right: 35px;
+  position: absolute;
+  right: 10%;
   z-index: 1000;
 }
 

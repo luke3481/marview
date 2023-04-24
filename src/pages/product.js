@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import L from "leaflet";
+import React, { useState } from "react";
 import {
   MapContainer,
   TileLayer,
   ZoomControl,
   LayersControl,
   useMapEvents,
-  Marker,
   Circle,
   LayerGroup,
-  Popup,
-  Rectangle,
 } from "react-leaflet";
 import {
   PageContainer,
@@ -19,7 +14,7 @@ import {
   AisTileLayer,
 } from "./styles/product_style.js";
 import TemperatureLegend from "../components/legend_temp.js";
-import WindLegend from "../components/legend_wind.js";
+import AISLegend from "../components/legend_ais.js";
 import vdrData from "./water_points_10k.json";
 
 function Product() {
@@ -34,15 +29,15 @@ function Product() {
         if (e.name === "Temperature") {
           setActiveLayer("Temperature");
         }
-        if (e.name === "Wind") {
-          setActiveLayer("Wind");
+        if (e.name === "AIS") {
+          setActiveLayer("AIS");
         }
       },
       overlayremove: (e) => {
         if (e.name === "Temperature") {
           setActiveLayer(null);
         }
-        if (e.name === "Wind") {
+        if (e.name === "AIS") {
           setActiveLayer(null);
         }
       },
@@ -113,7 +108,7 @@ function Product() {
         <ZoomControl position="topright" />
         <LegendControl />
         {activeLayer === "Temperature" && <TemperatureLegend />}
-        {/* {activeLayer === "Wind" && <WindLegend />} */}
+        {activeLayer === "AIS" && <AISLegend />}
       </MapContainer>
     </PageContainer>
   );
