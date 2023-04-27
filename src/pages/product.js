@@ -6,6 +6,7 @@ import {
   LayersControl,
   useMapEvents,
   Circle,
+  CircleMarker,
   LayerGroup,
 } from "react-leaflet";
 import {
@@ -53,15 +54,28 @@ function Product() {
         zoom={6}
         scrollWheelZoom={true}
         zoomControl={false}
-        // crossOrigin={true}
       >
-        <MapTileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          // url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
-        />
-
         <LayersControl position="topleft">
+          <LayersControl.BaseLayer checked name="Streets">
+            <MapTileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+            />
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Ocean">
+            <TileLayer
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"
+              attribution="Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri"
+              maxZoom={13}
+            />
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Topographic">
+            <TileLayer
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}"
+              attribution="Tiles &copy; Esri &mdash; Copyright: &copy; DeLorme"
+              maxZoom={11}
+            />
+          </LayersControl.BaseLayer>
           <LayersControl.Overlay name="AIS">
             <AisTileLayer
               url={`https://tiles.marinetraffic.com/ais_helpers/shiptilesingle.aspx?output=png&sat=1&grouping=shiptype&tile_size=256&legends=1&zoom=
@@ -69,12 +83,13 @@ function Product() {
               attribution='&copy; <a href="https://www.marinetraffic.com/en/ais/home/centerx:-86.8/centery:25.3/zoom:6">MarineTraffic</a>'
             />
           </LayersControl.Overlay>
-          <LayersControl.Overlay name="Radar">
+          <LayersControl.Overlay name="Radar (demo)">
             <LayerGroup>
               {vdrData.map((vdr) => (
                 <Circle
                   center={[vdr.latitude, vdr.longitude]}
-                  pathOptions={{ color: "#FFFF00" }}
+                  // pathOptions={{ color: "#FFFF00" }}
+                  pathOptions={{ color: "#ffae42" }}
                 ></Circle>
               ))}
             </LayerGroup>

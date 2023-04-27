@@ -15,5 +15,5 @@ export const MapTileLayer = styled(TileLayer)`
 `;
 
 export const AisTileLayer = styled(TileLayer)`
-  filter: brightness(0.9);
+  filter: brightness(0.8);
 `;

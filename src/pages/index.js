@@ -49,7 +49,7 @@ function Home() {
             />
             <Card
               title="Visibility with Marview"
-              body="Marview comines weather, oceanographic, and traditional AIS feeds from thousands of shipborne sensors into one platform, empowering mariners with a single screen for all navigational needs."
+              body="Marview combines weather, oceanographic, and traditional AIS feeds from thousands of shipborne sensors into one platform, empowering mariners with a single screen for all navigational needs."
               image={after}
               width="45%"
             />
