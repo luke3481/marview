@@ -34,7 +34,7 @@ df['LON'] = y
 df.rename(columns={'LAT': 'X', 'LON': 'Y'}, inplace=True)
 
 # Save the updated DataFrame to a new CSV file
-df.to_csv('stored.csv', index=False)
+df.to_csv('backend/data/stored.csv', index=False)
 
 # Remove old CSV file
 os.remove('AIS_2022_01_01.csv')
