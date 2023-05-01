@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -23,6 +23,10 @@ function Product() {
   const API_KEY = "e6d8c9c20269bd6d193a610ab4f7d761"; /* my api key */
   const center = [25.1, -84.1];
   const [activeLayer, setActiveLayer] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function LegendControl() {
     useMapEvents({

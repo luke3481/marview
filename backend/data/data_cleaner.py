@@ -6,7 +6,7 @@ import io
 import os
 
 # Download the ZIP file from the URL
-url = 'https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_01_01.zip'
+url = 'https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_01_02.zip'
 response = requests.get(url)
 
 # Extract the contents of the ZIP file
@@ -14,7 +14,9 @@ with zipfile.ZipFile(io.BytesIO(response.content)) as zip_ref:
     zip_ref.extractall()
 
 # Read in your CSV data into a Pandas DataFrame
-df = pd.read_csv('AIS_2022_01_01.csv')
+split_string = url.split("/")[-1].split(".")[0]
+file_name = split_string + ".csv"
+df = pd.read_csv(file_name)
 
 # drop all columns except LAT and LON
 df.drop(df.columns.difference(['LAT', 'LON']), axis=1, inplace=True)
@@ -34,7 +36,8 @@ df['LON'] = y
 df.rename(columns={'LAT': 'X', 'LON': 'Y'}, inplace=True)
 
 # Save the updated DataFrame to a new CSV file
-df.to_csv('backend/data/stored.csv', index=False)
+final_file = file_name + "_cleaned.csv"
+df.to_csv(final_file, index=False)
 
 # Remove old CSV file
-os.remove('AIS_2022_01_01.csv')
+os.remove(file_name)

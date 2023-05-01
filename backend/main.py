@@ -70,10 +70,10 @@ async def startup_event():
     # Load file
     indexhtml = open('./www/index.html', 'r').read()
 
-    if pathlib.Path("data/stored.csv").exists():
+    if pathlib.Path("data/AIS_2022_01_02_cleaned.csv").exists():
         print("Loading data from file...")
         #td = pd.read_csv('data/stored.csv', usecols=['X', 'Y'])
-        pp = csv.read_csv('data/stored.csv')
+        pp = csv.read_csv('data/AIS_2022_01_02_cleaned.csv')
         td = pp.to_pandas()
 
         #td=td.set_index(['X', 'Y'])
