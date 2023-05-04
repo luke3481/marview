@@ -70,16 +70,16 @@ async def startup_event():
     # Load file
     indexhtml = open('./www/index.html', 'r').read()
 
-    if pathlib.Path("data/AIS_2022_01_02_cleaned.csv").exists():
-        print("Loading data from file...")
-        #td = pd.read_csv('data/stored.csv', usecols=['X', 'Y'])
-        pp = csv.read_csv('data/AIS_2022_01_02_cleaned.csv')
-        td = pp.to_pandas()
+    # if pathlib.Path("data/AIS.csv").exists():
+    #     print("Loading data from file...")
+    #     #td = pd.read_csv('data/stored.csv', usecols=['X', 'Y'])
+    #     pp = csv.read_csv('data/AIS.csv')
+    #     td = pp.to_pandas()
 
-        #td=td.set_index(['X', 'Y'])
-    else:
-        print("There's no data/stored.csv file!  Execute ./getdata.sh first!")
-        sys.exit(1)
+    #     #td=td.set_index(['X', 'Y'])
+    # else:
+    #     print("There's no data/stored.csv file!  Execute ./getdata.sh first!")
+    #     sys.exit(1)
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -88,7 +88,13 @@ async def root():
 
 @app.get("/tiles/{zoom}/{x}/{y}.png")
 async def gentile(zoom, x, y):
-    results = generateatile(zoom, x, y)
-    return Response(content=results, media_type="image/png")
+    # results = generateatile(zoom, x, y)
+    # return Response(content=results, media_type="image/png")
+    tile_path = f'data/tiles/{zoom}/{x}/{y}.png'
+    if not os.path.exists(tile_path):
+        return Response(status_code=404)
+    with open(tile_path, 'rb') as f:
+        tile = f.read()
+    return Response(content=tile, media_type='image/png')
 
 app.mount("/lib", StaticFiles(directory="./www/lib"), name="lib")

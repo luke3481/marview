@@ -6,7 +6,7 @@ import io
 import os
 
 # Download the ZIP file from the URL
-url = 'https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_01_02.zip'
+url = 'https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_01_07.zip'
 response = requests.get(url)
 
 # Extract the contents of the ZIP file
@@ -33,10 +33,10 @@ x, y = pyproj.transform(in_proj, out_proj, df['LAT'].values, df['LON'].values)
 # Add the new x and y columns to your DataFrame
 df['LAT'] = x
 df['LON'] = y
-df.rename(columns={'LAT': 'X', 'LON': 'Y'}, inplace=True)
+df.rename(columns={'LAT': 'x', 'LON': 'y'}, inplace=True)
 
 # Save the updated DataFrame to a new CSV file
-final_file = file_name + "_cleaned.csv"
+final_file = split_string + "_cleaned.csv"
 df.to_csv(final_file, index=False)
 
 # Remove old CSV file
