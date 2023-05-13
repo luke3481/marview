@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TemperatureLegendWrapper = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 10px;
   z-index: 1000;
   background-color: white;

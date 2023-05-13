@@ -8,7 +8,7 @@ export const LegendContainer = styled.div`
   animation: fadeInOut 1s ease-out forwards;
   opacity: 0;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 10px;
   z-index: 1000;
   width: 100px;

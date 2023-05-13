@@ -8,6 +8,7 @@ import {
   Circle,
   CircleMarker,
   LayerGroup,
+  useMap,
 } from "react-leaflet";
 import {
   PageContainer,
@@ -15,6 +16,7 @@ import {
   AisTileLayer,
 } from "./styles/product_style.js";
 import TemperatureLegend from "../components/legend_temp.js";
+import MouseCoordinates from "../components/mouse_coordinates.js";
 import AISLegend from "../components/legend_ais.js";
 import vdrData from "./water_points_10k.json";
 
@@ -115,8 +117,8 @@ function Product() {
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Wind">
             <TileLayer
-              // url={`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
-              url={`http://maps.openweathermap.org/maps/2.0/weather/WND/{z}/{x}/{y}?use_norm=true&arrow_step=16&appid=${API_KEY}`}
+              url={`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
+              // url={`http://maps.openweathermap.org/maps/2.0/weather/WND/{z}/{x}/{y}?use_norm=true&arrow_step=16&appid=${API_KEY}`}
             />
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Pressure">
@@ -126,6 +128,9 @@ function Product() {
           </LayersControl.Overlay>
         </LayersControl>
         <ZoomControl position="topright" />
+        <div className="leaflet-bottom leaflet-left">
+          <MouseCoordinates />
+        </div>
         <LegendControl />
         {activeLayer === "Temperature" && <TemperatureLegend />}
         {activeLayer === "AIS" && <AISLegend />}
