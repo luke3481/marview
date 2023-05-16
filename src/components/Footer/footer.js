@@ -1,18 +1,13 @@
 import React from "react";
-import "./footer.css";
+import { Container, SubContainer, Text } from "./footer_style";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="text">© 2023 Marview. All rights reserved. </div>
-        {/* <div className="social-media">
-          <a href="#">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </div> */}
-      </div>
-    </footer>
+    <Container>
+      <SubContainer>
+        <Text>© 2023 Marview. All rights reserved. </Text>
+      </SubContainer>
+    </Container>
   );
 }
 

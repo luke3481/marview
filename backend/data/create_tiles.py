@@ -5,9 +5,10 @@ import datashader as ds
 import datashader.transfer_functions as tf
 from colorcet import bmw, coolwarm, fire, CET_L18
 from PIL import ImageDraw
+import dask.dataframe
 
 def read_AIS():
-    df = pd.read_csv('AIS.csv')
+    df = pd.read_parquet('AIS_2022_08.parquet.brotli', engine='fastparquet')
     return df
 
 def load_data_func(x_range, y_range):
@@ -32,14 +33,13 @@ def post_render_func(img, **kwargs):
 if __name__ == "__main__":
     global df
 
-    # full_extent_of_data = (-500000, -500000, 500000, 500000)
     full_extent_of_data = (-20037508.34, -20037508.34, 20037508.34, 20037508.34)
 
     df = read_AIS()
-    output_path = 'tiles'
+    output_path = '../../public/tiles_aug_22'
     
     render_tiles(full_extent_of_data,
-                       levels=range(12),
+                       levels=[8],
                        load_data_func=load_data_func,
                        rasterize_func=rasterize_func,
                        shader_func=shader_func,

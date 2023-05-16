@@ -6,23 +6,21 @@ import {
   LayersControl,
   useMapEvents,
   Circle,
-  CircleMarker,
   LayerGroup,
-  useMap,
 } from "react-leaflet";
 import {
   PageContainer,
   MapTileLayer,
   AisTileLayer,
-} from "./styles/product_style.js";
-import TemperatureLegend from "../components/legend_temp.js";
-import MouseCoordinates from "../components/mouse_coordinates.js";
-import AISLegend from "../components/legend_ais.js";
-import vdrData from "./water_points_10k.json";
+} from "./page_styles/product_style.js";
+import TemperatureLegend from "../components/other/legend_temp.js";
+import MouseCoordinates from "../components/other/mouse_coordinates.js";
+import AISLegend from "../components/other/legend_ais.js";
+import vdrData from "./demo_radar_data.json";
 
 function Product() {
-  // const API_KEY = "06aac0fd4ba239a20d824ef89602f311"; /* api key that works */
-  const API_KEY = "e6d8c9c20269bd6d193a610ab4f7d761"; /* my api key */
+  // const API_KEY = "06aac0fd4ba239a20d824ef89602f311"; /* alternate api key */
+  const API_KEY = "e6d8c9c20269bd6d193a610ab4f7d761";
   const center = [25.1, -84.1];
   const [activeLayer, setActiveLayer] = useState(null);
 
@@ -49,7 +47,6 @@ function Product() {
         }
       },
     });
-
     return null;
   }
 

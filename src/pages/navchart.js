@@ -1,5 +1,5 @@
 import React from "react";
-import { PageContainer, Title } from "./styles/navchart_style.js";
+import { PageContainer, Title } from "./page_styles/navchart_style.js";
 
 function NavChart() {
   return (

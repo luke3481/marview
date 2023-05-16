@@ -7,8 +7,7 @@ import {
   SubContainer,
   Box,
   TextBody,
-} from "./styles/about_style.js";
-import Card from "../components/card";
+} from "./page_styles/about_style.js";
 
 function About() {
   return (

@@ -1,18 +1,5 @@
-// import React from "react";
-// import { PageContainer, Title } from "./styles/roadmap_style.js";
-
-// function Roadmap() {
-//   return (
-//     <PageContainer>
-//       <Title>Roadmap</Title>
-//     </PageContainer>
-//   );
-// }
-
-// export default Roadmap;
-
-import React, { useEffect, useRef, useState } from "react";
-import { PageContainer, Title } from "./styles/roadmap_style.js";
+import React from "react";
+import { PageContainer, Title } from "./page_styles/roadmap_style.js";
 import {
   VerticalTimeline,
   VerticalTimelineElement,

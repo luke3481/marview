@@ -12,10 +12,9 @@ import {
   ContentContainer3,
   SubContainer,
   SubContainer2,
-  SubSubContainer,
   CardContainer,
   TextBody,
-} from "./styles/index_style.js";
+} from "./page_styles/index_style.js";
 import landing_video from "../imgs/landing_video.mp4";
 import before from "../imgs/ais_only.png";
 import after from "../imgs/ais_andradar.png";
@@ -23,8 +22,8 @@ import fuel_savings from "../imgs/fuel_savings.svg";
 import co2_savings from "../imgs/co2_savings.svg";
 import train_data from "../imgs/train_data.svg";
 import domain_awareness from "../imgs/domain_awareness.svg";
-import Card from "../components/card";
-import Card2 from "../components/card2";
+import Card from "../components/other/card";
+import Card2 from "../components/other/card2";
 import info_video from "../imgs/info_video.mp4";
 
 function Home() {

@@ -1,2 +1,4 @@
 # Ignore everything in this directory
-stored.csv
+AIS_01_22.csv
+AIS.csv
+january_full_month.parquet

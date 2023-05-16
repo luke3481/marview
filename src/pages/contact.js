@@ -10,7 +10,7 @@ import {
   FormTextArea,
   FormButton,
   Title,
-} from "./styles/contact_style.js";
+} from "./page_styles/contact_style.js";
 
 const FORMSPARK_FORM_ID = "2pxnvScI";
 

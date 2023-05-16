@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar/navbar";
-import Footer from "./components/Footer/footer";
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
@@ -21,7 +21,6 @@ function App() {
         <Route path="/livemap" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/roadmap" element={<Roadmap />} />
-        <Route path="/navchart" element={<NavChart />} />
         <Route path="/heatmap" element={<Heatmap />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />

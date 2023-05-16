@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import LoginButton from "../../components/Navbar/login";
+import LoginButton from "./login";
 import { NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import "./Navbar.css";
-import ProductMenu from "../productMenu";
-import ProfileMenu from "../profileMenu";
+import "./navbar_styles/Navbar.css";
+import ProductMenu from "./productMenu";
+import ProfileMenu from "./profileMenu";
 
 function Navbar() {
   const [click, setClick] = useState(false);

@@ -1,13 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import LoginButton from "./../components/Navbar/login";
-import LogoutButton from "./../components/Navbar/logout";
+import LoginButton from "./../components/navbar/login";
+import LogoutButton from "./../components/navbar/logout";
 import {
   PageContainer,
   ProfileContainer,
   Title,
-  Button,
-} from "./styles/profile_style.js";
+} from "./page_styles/profile_style.js";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Profile() {
