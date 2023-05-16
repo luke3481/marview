@@ -9,7 +9,6 @@ import Roadmap from "./pages/roadmap";
 import Profile from "./pages/profile";
 import Product from "./pages/product";
 import Contact from "./pages/contact";
-import NavChart from "./pages/navchart";
 import Heatmap from "./pages/heatmap";
 
 function App() {
