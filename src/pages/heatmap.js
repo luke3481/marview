@@ -23,6 +23,7 @@ function Heatmap() {
   const jul_tiles = "./tiles_jul_22/{z}/{x}/{y}.png";
   const aug_tiles = "./tiles_aug_22/{z}/{x}/{y}.png";
   const sep_tiles = "./tiles_sep_22/{z}/{x}/{y}.png";
+  const sep_test = "./tiles_sep_test/{z}/{x}/{y}.png";
   const oct_tiles = "./tiles_oct_22/{z}/{x}/{y}.png";
   const nov_tiles = "./tiles_nov_22/{z}/{x}/{y}.png";
   const dec_tiles = "./tiles_dec_22/{z}/{x}/{y}.png";
@@ -31,7 +32,7 @@ function Heatmap() {
     <PageContainer>
       <MapContainer
         center={center}
-        zoom={3}
+        zoom={1}
         scrollWheelZoom={true}
         zoomControl={false}
         maxZoom={8}
@@ -42,7 +43,7 @@ function Heatmap() {
           opacity={1.0}
         />
         <LayersControl position="topleft" collapsed={false}>
-          <LayersControl.BaseLayer name="Jan 2022">
+          {/* <LayersControl.BaseLayer name="Jan 2022">
             <TileLayer url={jan_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Feb 2022">
@@ -65,11 +66,14 @@ function Heatmap() {
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Aug 2022">
             <TileLayer url={aug_tiles} />
-          </LayersControl.BaseLayer>
+          </LayersControl.BaseLayer> */}
+          {/* <LayersControl.BaseLayer name="Sep 2022">
+            <TileLayer url={sep_tiles} />
+          </LayersControl.BaseLayer> */}
           <LayersControl.BaseLayer name="Sep 2022">
             <TileLayer url={sep_tiles} />
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Oct 2022">
+          {/* <LayersControl.BaseLayer name="Oct 2022">
             <TileLayer url={oct_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Nov 2022">
@@ -77,7 +81,7 @@ function Heatmap() {
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Dec 2022">
             <TileLayer url={dec_tiles} />
-          </LayersControl.BaseLayer>
+          </LayersControl.BaseLayer> */}
         </LayersControl>
         <ZoomControl position="topright" />
         <div className="leaflet-bottom leaflet-left">
