@@ -1,14 +1,12 @@
 from datashader.tiles import render_tiles
 import pandas as pd
-import numpy as np
 import datashader as ds
 import datashader.transfer_functions as tf
 from colorcet import bmw, coolwarm, fire, CET_L18
 from PIL import ImageDraw
-import dask.dataframe
 
 def read_AIS():
-    df = pd.read_parquet('AIS_2022_09.parquet.brotli', engine='fastparquet')
+    df = pd.read_parquet('apr_whole_month.parquet', engine='fastparquet')
     return df
 
 def load_data_func(x_range, y_range):
@@ -41,10 +39,10 @@ if __name__ == "__main__":
     full_extent_of_data = (-19342849, 1086017, -6193232, 6582146)
 
     df = read_AIS()
-    output_path = '../../public/tiles_sep_test'
+    output_path = '../../public/tiles_apr_22'
     
     render_tiles(full_extent_of_data,
-                       levels=[2],
+                       levels=range(0, 9),
                        load_data_func=load_data_func,
                        rasterize_func=rasterize_func,
                        shader_func=shader_func,

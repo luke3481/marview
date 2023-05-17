@@ -23,7 +23,6 @@ function Heatmap() {
   const jul_tiles = "./tiles_jul_22/{z}/{x}/{y}.png";
   const aug_tiles = "./tiles_aug_22/{z}/{x}/{y}.png";
   const sep_tiles = "./tiles_sep_22/{z}/{x}/{y}.png";
-  const sep_test = "./tiles_sep_test/{z}/{x}/{y}.png";
   const oct_tiles = "./tiles_oct_22/{z}/{x}/{y}.png";
   const nov_tiles = "./tiles_nov_22/{z}/{x}/{y}.png";
   const dec_tiles = "./tiles_dec_22/{z}/{x}/{y}.png";
@@ -32,18 +31,19 @@ function Heatmap() {
     <PageContainer>
       <MapContainer
         center={center}
-        zoom={1}
+        zoom={4}
         scrollWheelZoom={true}
         zoomControl={false}
         maxZoom={8}
       >
         <TileLayer
-          url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
-          attribution="Tiles &copy; Stamen"
+          url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}"
+          attribution="Tiles &copy; Stamen Design"
           opacity={1.0}
+          ext="png"
         />
         <LayersControl position="topleft" collapsed={false}>
-          {/* <LayersControl.BaseLayer name="Jan 2022">
+          <LayersControl.BaseLayer name="Jan 2022">
             <TileLayer url={jan_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Feb 2022">
@@ -55,7 +55,7 @@ function Heatmap() {
           <LayersControl.BaseLayer name="Apr 2022">
             <TileLayer url={apr_tiles} />
           </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="May 2022">
+          {/* <LayersControl.BaseLayer name="May 2022">
             <TileLayer url={may_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Jun 2022">
@@ -66,14 +66,11 @@ function Heatmap() {
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Aug 2022">
             <TileLayer url={aug_tiles} />
-          </LayersControl.BaseLayer> */}
-          {/* <LayersControl.BaseLayer name="Sep 2022">
-            <TileLayer url={sep_tiles} />
-          </LayersControl.BaseLayer> */}
+          </LayersControl.BaseLayer> 
           <LayersControl.BaseLayer name="Sep 2022">
             <TileLayer url={sep_tiles} />
           </LayersControl.BaseLayer>
-          {/* <LayersControl.BaseLayer name="Oct 2022">
+          <LayersControl.BaseLayer name="Oct 2022">
             <TileLayer url={oct_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Nov 2022">
