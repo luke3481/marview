@@ -55,7 +55,7 @@ function Heatmap() {
           <LayersControl.BaseLayer name="Apr 2022">
             <TileLayer url={apr_tiles} />
           </LayersControl.BaseLayer>
-          {/* <LayersControl.BaseLayer name="May 2022">
+          <LayersControl.BaseLayer name="May 2022">
             <TileLayer url={may_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Jun 2022">
@@ -67,7 +67,7 @@ function Heatmap() {
           <LayersControl.BaseLayer name="Aug 2022">
             <TileLayer url={aug_tiles} />
           </LayersControl.BaseLayer> 
-          <LayersControl.BaseLayer name="Sep 2022">
+          {/* <LayersControl.BaseLayer name="Sep 2022">
             <TileLayer url={sep_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Oct 2022">

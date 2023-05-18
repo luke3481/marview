@@ -23,7 +23,7 @@ function Roadmap() {
           <h3 className="vertical-timeline-element-title">2023 - Q2</h3>
           <p>
             <li>Launch Live Map MVP</li>
-            <li>Launch Trends Map MVP</li>
+            <li>Launch Heat Map MVP</li>
             <li>Complete pre-seed funding round</li>
           </p>
         </VerticalTimelineElement>
