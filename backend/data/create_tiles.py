@@ -6,7 +6,7 @@ from colorcet import bmw, coolwarm, fire, CET_L18
 from PIL import ImageDraw
 
 def read_AIS():
-    df = pd.read_parquet('AIS_2022_08.parquet.brotli', engine='fastparquet')
+    df = pd.read_parquet('AIS_2022_012.parquet.brotli', engine='fastparquet')
     return df
 
 def load_data_func(x_range, y_range):
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     full_extent_of_data = (-19342849, 1086017, -6193232, 6582146)
 
     df = read_AIS()
-    output_path = '../../public/tiles_aug_22'
+    output_path = '../../public/tiles_dec_22'
     
     render_tiles(full_extent_of_data,
                        levels=range(0,9),

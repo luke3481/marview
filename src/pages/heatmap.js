@@ -66,8 +66,8 @@ function Heatmap() {
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Aug 2022">
             <TileLayer url={aug_tiles} />
-          </LayersControl.BaseLayer> 
-          {/* <LayersControl.BaseLayer name="Sep 2022">
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Sep 2022">
             <TileLayer url={sep_tiles} />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Oct 2022">
@@ -78,7 +78,7 @@ function Heatmap() {
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Dec 2022">
             <TileLayer url={dec_tiles} />
-          </LayersControl.BaseLayer> */}
+          </LayersControl.BaseLayer>
         </LayersControl>
         <ZoomControl position="topright" />
         <div className="leaflet-bottom leaflet-left">
