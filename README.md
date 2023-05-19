@@ -8,7 +8,7 @@ The repository contains code for the website, live map, and heat map.
 
 ### Website
 
-The website is build using react hooks, with the styled-components framework for styling. We use Auth0 for user authentication and management and formspark for our contact form.
+The website is build using react hooks, with the styled-components framework for styling. We use Auth0 for user authentication and formspark for our contact form.
 
 ### Live Map
 
