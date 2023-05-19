@@ -5,6 +5,7 @@ import datashader.transfer_functions as tf
 from colorcet import bmw, coolwarm, fire, CET_L18
 from PIL import ImageDraw
 
+# edit this function to read in data. Ensure it has been cleaned by data_cleaner.py
 def read_AIS():
     df = pd.read_parquet('AIS_2022_012.parquet.brotli', engine='fastparquet')
     return df

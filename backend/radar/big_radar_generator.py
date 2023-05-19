@@ -1,28 +1,3 @@
-# import random
-# import json
-# import geopandas as gpd
-
-# # Load the Natural Earth dataset of bodies of water
-# water = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres')).loc[
-#     lambda df: df['geometry'].type == 'Polygon'
-# ]
-
-# points = []
-# while len(points) < 10000:
-#     # Generate random coordinates
-#     lat = random.uniform(-90, 90)
-#     lon = random.uniform(-180, 180)
-#     # Check if point falls within any of the bodies of water
-#     for _, row in water.iterrows():
-#         if row['geometry'].contains(gpd.points_from_xy([lon], [lat])[0]):
-#             # Add point to list if it's in a body of water
-#             points.append({"latitude": lat, "longitude": lon})
-#             break
-
-# # Save points to a JSON file
-# with open('water_points.json', 'w') as outfile:
-#     json.dump(points, outfile)
-
 import random
 import json
 import geopandas as gpd
