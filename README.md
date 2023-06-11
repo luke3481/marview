@@ -18,6 +18,6 @@ The live map is built on the react-leaflet library. The base tile-layers are all
 
 The Heat Map is also built on the react-leaflet library, using a public tile-layer as its base layer. The monthly tile layers were generated from:
 
-#### 1. Collating daily AIS point data from marinecadastre.gov into monthly parquet files (after cleaning the data).
+1. Collating daily AIS point data from marinecadastre.gov into monthly parquet files (after cleaning the data).
 
-#### 2. Running create_tiles.py to generate a unique tile server for each month. Each incremental zoom level requires ~4x the tiles and storage. For now, the tile servers are stored in the public folder.
+2. Running create_tiles.py to generate a unique tile server for each month. Each incremental zoom level requires ~4x the tiles and storage. For now, the tile servers are stored in the public folder.
