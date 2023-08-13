@@ -80,7 +80,7 @@ function Navbar() {
                 Contact
               </NavLink>
             </li>
-            <li
+            {/* <li
               className="nav-items"
               onMouseEnter={onMouseProfileEnter}
               onMouseLeave={onMouseProfileLeave}
@@ -93,7 +93,7 @@ function Navbar() {
                   {profiledropdown && <ProfileMenu />}
                 </NavLink>
               )}
-            </li>
+            </li> */}
           </ul>
         </nav>
       </section>
