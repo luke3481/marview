@@ -6,7 +6,7 @@ import "./navbar_styles/Navbar.css";
 import ProductMenu from "./productMenu";
 import ProfileMenu from "./profileMenu";
 
-function Navbar() {
+function Navbar({ currentPage }) {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [profiledropdown, setProfileDropdown] = useState(false);
@@ -37,7 +37,7 @@ function Navbar() {
       console.log("Scroll Position:", scrollPosition);
       console.log("Current Page:", currentPage);
 
-      if (scrollPosition > 60 && currentPage !== "livemap") {
+      if (scrollPosition > 60 && currentPage !== "product") {
         setNavbarBackground("white");
       } else {
         setNavbarBackground("transparent");
