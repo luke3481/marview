@@ -1,14 +1,69 @@
 import styled from "styled-components";
-import ship_topview from "../../imgs/background.jpg";
+import wave from "../../imgs/wave.png";
 
 export const PageContainer = styled.div`
-  min-height: calc(100vh - 60px);
-  padding-top: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8;
+  // min-height: calc(100vh - 60px);
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: #4d4dff;
+    overflow: hidden;
+  }
+  section .air {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(${wave});
+    background-size: 1000px 100px;
+  }
+  section .air.air1 {
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .air.air2 {
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .air.air3 {
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  section .air.air4 {
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes wave {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+  @keyframes wave2 {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: -1000px;
+    }
+  }
 
   @media screen and (max-width: 768px) {
     // justify-content: flex-start;
@@ -18,20 +73,19 @@ export const PageContainer = styled.div`
 `;
 
 export const ContactContainer = styled.div`
-  max-width: 700px;
-  width: 80%;
+  display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  // background: #fff;
+  // border-radius: 25px;
+  // padding-bottom: 20px;
   // padding: 20px;
   @media screen and (max-width: 768px) {
     // padding: 10px;
   }
 `;
 
-export const Title = styled.h4`
+export const Title = styled.h1`
   color: #00008b;
-  font-size: 2rem;
-  font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
   padding-top: 20px;
@@ -44,6 +98,10 @@ export const Title = styled.h4`
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px;
+  width: 50%;
 `;
 
 export const FormLabel = styled.label`
@@ -61,7 +119,8 @@ export const FormLabel = styled.label`
 export const FormInput = styled.input`
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 25px;
   margin-bottom: 15px;
   font: inherit;
   display: inline-block;
@@ -80,7 +139,8 @@ export const FormInput = styled.input`
 export const FormTextArea = styled.textarea`
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 25px;
   margin-bottom: 15px;
   font: inherit;
 

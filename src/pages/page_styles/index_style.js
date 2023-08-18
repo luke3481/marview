@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ship_topview from "../../imgs/ship_topview.jpg";
+import wave from "../../imgs/wave.png";
 
 export const PageContainer = styled.div`
-  min-height: calc(100vh - 60px);
-  padding-top: 60px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 768px) {
@@ -22,7 +22,7 @@ export const HeadlineContainer = styled.div`
   flex-direction: column;
   width: 60%;
   margin-left: 10%;
-  margin-top: 1%;
+  margin-top: 10%;
   @media screen and (max-width: 768px) {
     width: 90%;
     margin-top: 10%;
@@ -105,7 +105,7 @@ export const ContentContainer3 = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #fff;
   padding-bottom: 30px;
   @media screen and (max-width: 768px) {
     padding: 20px 0px 20px 0px;
@@ -141,11 +141,20 @@ export const TextBody = styled.div`
   }
 `;
 
+export const TextBody2 = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    padding-right: 0px;
+  }
+`;
+
 export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  gap: 30px;
   margin-top: 16px;
   margin-bottom: 30px;
   @media screen and (max-width: 768px) {

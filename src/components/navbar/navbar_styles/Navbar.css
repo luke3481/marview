@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   width: 100%;
-  background: #ffffff;
+  transition: background-color 0.5s ease;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -11,18 +11,24 @@
 }
 
 .logo {
-  content: url(../../../imgs/marview_new_logo.png);
+  content: url(../../../imgs/marview_logo.png);
   height: 60%;
-  position: absolute;
+  /* position: absolute; */
   left: 10%;
+}
+
+.logo.transparent {
+  content: url(../../../imgs/marview_white_logo.png);
+  height: 60%;
 }
 
 .nav-side-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
   gap: 0 10px;
-  position: absolute;
-  right: 10%;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 35px;
   z-index: 1000;
 }
 
@@ -34,12 +40,10 @@
 }
 
 .nav-links {
-  color: #00008b;
   font-weight: 600;
-
   text-decoration: None;
   padding: 8px 20px;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .nav-links:hover {
@@ -61,6 +65,7 @@
 .fa-caret-down {
   color: #00008b;
   font-size: 80%;
+  transition: all 0.5s ease-out;
 }
 
 .nav-links-button {
@@ -108,14 +113,13 @@
 
   .logo {
     position: absolute;
-    left: 1rem;
     /* transform: translate(25%, 50%); */
   }
 
   .menu-icon {
     display: block;
     position: absolute;
-    right: 1rem;
+    left: 1rem;
     /* transform: translate(-100%, 60%); */
     font-size: 1.8rem;
     cursor: pointer;

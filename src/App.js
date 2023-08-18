@@ -10,11 +10,13 @@ import Profile from "./pages/profile";
 import Product from "./pages/product";
 import Contact from "./pages/contact";
 import Heatmap from "./pages/heatmap";
+import Privacy from "./pages/privacy";
+import Terms from "./pages/terms";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar currentPage={window.location.pathname.slice(1)} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/livemap" element={<Product />} />
@@ -23,8 +25,10 @@ function App() {
         <Route path="/heatmap" element={<Heatmap />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }

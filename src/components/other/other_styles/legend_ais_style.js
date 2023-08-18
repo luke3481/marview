@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const LegendContainer = styled.div`
   background-color: white;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   animation: fadeInOut 1s ease-out forwards;
   opacity: 0;
   position: absolute;
   bottom: 20px;
-  left: 10px;
+  right: 10px;
   z-index: 1000;
   width: 100px;
 
@@ -39,7 +39,7 @@ export const LegendImage = styled.img`
 `;
 
 export const LegendTitle = styled.p`
-  font-size: 0.8rem;
+  // font-size: 0.8rem;
   font-weight: bold;
   color: black;
 `;

@@ -1,0 +1,52 @@
+import styled from "styled-components";
+
+export const CardContainer = styled.div`
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 13%;
+  &:hover {
+    transform: translate(0, -10px);
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const Headshot = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+`;
+
+export const Name = styled.h4`
+  text-align: center;
+  margin-bottom: 2px;
+`;
+
+export const Position = styled.div`
+  margin-bottom: 8px;
+  color: #666;
+  text-align: center;
+`;
+
+export const Description = styled.div`
+  text-align: center;
+  color: #333;
+  font-size: 0.8rem;
+`;
+
+export const LinkedInIcon = styled.a`
+  margin-top: 8px;
+  font-size: 24px;
+  color: #0077b5;
+  text-decoration: none;
+  &:hover {
+    color: #005f8e;
+  }
+`;
