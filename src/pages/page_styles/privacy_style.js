@@ -5,7 +5,7 @@ export const PageContainer = styled.div`
   section {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     background: #4d4dff;
     overflow: hidden;
   }

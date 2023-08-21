@@ -28,6 +28,7 @@ import Card from "../components/other/card";
 import Card2 from "../components/other/card2";
 import Card3 from "../components/other/card3";
 import info_video from "../imgs/info_video.mp4";
+import polsky from "../imgs/polsky.png";
 import Footer from "../components/footer/footer";
 
 function Home() {
@@ -108,15 +109,18 @@ illuminate dark ships and other vessels attempting to avoid detection."
           </SubContainer2>
         </SubContainer>
       </ContentContainer1>
+      <ContentContainer2>
+        <SubContainer>
+          <Subtitle>Our Investors and Partners</Subtitle>
+          <CardContainer>
+            <Card2 image={polsky} width="100%" />
+            <Card2 image={domain_awareness} width="250px" />
+          </CardContainer>
+        </SubContainer>
+      </ContentContainer2>
       <ContentContainer3>
         <SubContainer>
           <Subtitle>The Right Team</Subtitle>
-          <TextBody2>
-            We have experience across every facet of the maritime world, from
-            commercial masters to maritime special operators. More importantly,
-            we're commited to providing all maritime stakeholders with the
-            insights they need.
-          </TextBody2>
           <CardContainer>
             <Card3
               image="https://media.licdn.com/dms/image/C5603AQHet13bA04rHA/profile-displayphoto-shrink_800_800/0/1658165403601?e=1697673600&v=beta&t=F9eXzySx13lNOdet_lH-WQIJ6pVRz2pM69nRbV1FgK4"

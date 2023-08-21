@@ -18,11 +18,12 @@ export const Container = styled.footer`
 export const SubContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  // flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 80%;
   margin-left: 10%;
   gap: 150px;
+  margin-bottom: 100px;
   @media screen and (max-width: 768px) {
     justify-content: center;
     gap: 50px;
@@ -64,7 +65,7 @@ export const Title = styled.h2`
 `;
 
 export const SignUp = styled(Link)`
-  padding: 10px 50px;
+  padding: 10px 40px;
   border-radius: 25px;
   font-size: 1 rem;
   text-decoration: none;

@@ -1,12 +1,76 @@
 import styled from "styled-components";
 import about from "../../imgs/about.png";
+import wave from "../../imgs/wave.png";
 
 export const PageContainer = styled.div`
-  background-color: #fff;
-  min-height: calc(100vh - 60px);
-  padding-top: 60px;
-  display: flex;
-  flex-direction: column;
+  // min-height: calc(100vh - 60px);
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background: #4d4dff;
+    overflow: hidden;
+  }
+  section .air {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(${wave});
+    background-size: 1000px 100px;
+  }
+  section .air.air1 {
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .air.air2 {
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .air.air3 {
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  section .air.air4 {
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes wave {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+  @keyframes wave2 {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: -1000px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    // justify-content: flex-start;
+    align-items: center;
+    height: auto;
+  }
 `;
 
 export const SubContainer = styled.div`
@@ -26,17 +90,6 @@ export const SubContainer = styled.div`
 
 export const ContentContainer1 = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: url(${about});
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 700px;
-  background-position: top;
-  justify-content: center;
-  @media screen and (max-width: 768px) {
-    padding: 20px 0px 20px 0px;
-  }
 `;
 
 export const ContentContainer2 = styled.div`

@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
+  border-radius: 10px;
+  background: #f8f8f8;
   padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 13%;
-  &:hover {
-    transform: translate(0, -10px);
-  }
-  @media screen and (max-width: 768px) {
-    width: 100%;
+  width: 100%;
+  @media screen and (min-width: 769px) {
+    &:hover {
+      transform: translate(0, -10px);
+    }
   }
 `;
 

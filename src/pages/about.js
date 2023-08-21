@@ -8,11 +8,18 @@ import {
   Box,
   TextBody,
 } from "./page_styles/about_style.js";
+import Footer from "../components/footer/footer.js";
 
 function About() {
   return (
     <>
       <PageContainer>
+        <section>
+          <div class="air air1"></div>
+          <div class="air air2"></div>
+          <div class="air air3"></div>
+          <div class="air air4"></div>
+        </section>
         <ContentContainer1>
           <Title>Building Tomorrow's Maritime Frontier</Title>
         </ContentContainer1>
@@ -53,6 +60,7 @@ function About() {
           </SubContainer>
         </ContentContainer2>
       </PageContainer>
+      <Footer />
     </>
   );
 }

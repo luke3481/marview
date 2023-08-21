@@ -52,8 +52,9 @@ export const Video = styled.video`
 `;
 
 export const Demo = styled(Link)`
-  padding: 10px 25px;
+  padding: 15px 50px;
   border-radius: 25px;
+  border: 1px solid #4d4dff;
   font-size: 1 rem;
   text-decoration: none;
   font-weight: 500;
@@ -67,6 +68,7 @@ export const Demo = styled(Link)`
   &:hover {
     background: #fff;
     color: #00008b;
+    border: 1px solid #00008b;
     transition: all 0.2s ease-in;
     text-decoration: none;
   }
@@ -152,13 +154,17 @@ export const TextBody2 = styled.div`
 
 export const CardContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: column-wrap;
+  gap: 15px;
   justify-content: space-between;
-  gap: 30px;
   margin-top: 16px;
   margin-bottom: 30px;
+  & > * {
+    flex-basis: 100%; /* You can adjust the width value as needed */
+  }
   @media screen and (max-width: 768px) {
-    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
   }
 `;
 
