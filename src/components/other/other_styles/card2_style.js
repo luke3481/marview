@@ -1,28 +1,32 @@
 import styled from "styled-components";
 
-export const CardImage = styled.img`
-  height: 200px;
-  padding: 5px 5px 5px 5px;
-  width: auto;
-  //   object-fit: cover;
-  margin: 0 auto; /* Add margin: 0 auto to center the image horizontally */
-  display: block;
+export const CardImage = styled.div`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url(${(props) => props.image});
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const CardContainer = styled.div`
-  width: ${({ width }) => width || "300px"};
-  background-color: #fff;
-  border-radius: 2px;
-  //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  &:hover {
-    border: 1px solid #4d4dff;
-  }
-  &:hover ${CardImage} {
-    filter: brightness(100%) sepia(100%) saturate(800%) hue-rotate(200deg);
-  }
-  @media screen and (max-width: 768px) {
-    width: 100%;
+  border-radius: 10px;
+  background: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @media screen and (min-width: 769px) {
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #4d4dff;
+    }
+    &:hover ${CardImage} {
+      filter: brightness(100%) sepia(100%) saturate(800%) hue-rotate(200deg);
+    }
   }
 `;
 
@@ -32,6 +36,7 @@ export const CardContent = styled.div`
 
 export const CardTitle = styled.h2`
   font-size: 20px;
+  font-weight: 600;
   margin: 0;
   @media screen and (max-width: 768px) {
     text-align: center;
@@ -39,7 +44,7 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardBody = styled.p`
-  font-size: 16px;
+  font-size: 14px;
   color: #777;
   @media screen and (max-width: 768px) {
     text-align: center;

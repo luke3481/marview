@@ -16,6 +16,10 @@ import {
   CardContainer,
   TextBody,
   TextBody2,
+  Checklist,
+  ListItem,
+  Checkmark,
+  LaptopImage
 } from "./page_styles/index_style.js";
 import landing_video from "../imgs/landing_video.mp4";
 import before from "../imgs/ais_only.png";
@@ -29,6 +33,8 @@ import Card2 from "../components/other/card2";
 import Card3 from "../components/other/card3";
 import info_video from "../imgs/info_video.mp4";
 import polsky from "../imgs/polsky.png";
+import laptop from "../imgs/laptop.png";
+import checkmark from "../imgs/checkmark.png";
 import Footer from "../components/footer/footer";
 
 function Home() {
@@ -37,55 +43,65 @@ function Home() {
       <PageContainer>
         <Video src={landing_video} autoPlay loop muted playsinline />
         <HeadlineContainer>
-          <Title>The Future of Maritime Navigation</Title>
+          <Title>The future of maritime navigation.</Title>
           <Demo to="/livemap">Try Map</Demo>
         </HeadlineContainer>
       </PageContainer>
-      <ContentContainer1>
-        <SubContainer>
-          <Subtitle>Navigate the Ocean like Never Before</Subtitle>
-          <CardContainer>
-            <Card
-              title="Visibility Today"
-              body="AIS only."
-              image={before}
-              width="45%"
-            />
-            <Card
-              title="Visibility with Marview"
-              body="Marview combines weather, oceanographic, and traditional AIS feeds from thousands of shipborne sensors into one platform, empowering mariners with a single screen for all navigational needs."
-              image={after}
-              width="45%"
-            />
-          </CardContainer>
-        </SubContainer>
-      </ContentContainer1>
       <ContentContainer2>
         <SubContainer>
-          <Subtitle>Extending the Possibilities of Radar Data</Subtitle>
+          <Subtitle>All the data you need. In one place.</Subtitle>
+          <SubContainer2>
+            <Checklist>
+              <ListItem>
+                  <Checkmark src={checkmark} />
+                AIS
+              </ListItem>
+              <ListItem>
+                <Checkmark src={checkmark} />
+                Weather
+              </ListItem>
+              <ListItem>
+                <Checkmark src={checkmark} />
+                Pressure
+              </ListItem>
+              <ListItem>
+                <Checkmark src={checkmark} />
+                Currents
+              </ListItem>
+              <ListItem>
+                <Checkmark src={checkmark} />
+                ENC
+              </ListItem>
+            </Checklist>
+            <LaptopImage src={laptop} alt="marview laptop" />
+          </SubContainer2>
+        </SubContainer>
+      </ContentContainer2>
+      <ContentContainer2>
+        <SubContainer>
+          <Subtitle>Extending the possibilities of marine data</Subtitle>
           <CardContainer>
             <Card2
               title="Optimize Routing"
-              body="Marview’s data can be used to optimize routes, reduce fuel consumption, and avoid congestion, leading to significant savings for ship owners and operators."
+              body="Marview’s data can be used to optimize routes, reduce fuel consumption, and avoid congestion, leading to significant savings."
               image={fuel_savings}
               width="250px"
             />
             <Card2
-              title="Maritime Domain Awareness"
-              body="See what’s actually on the ocean’s surface. Task assets more effectively, monitor sea lines of communication, and
-illuminate dark ships and other vessels attempting to avoid detection."
+              title="Domain Awareness"
+              body="Task assets more effectively, monitor sea lines of communication, and illuminate dark ships and other vessels attempting to avoid detection."
               image={domain_awareness}
               width="250px"
             />
             <Card2
               title="AI/ML Training Data"
-              body="Data collected from our network of vessels can be used to train AI/ML models for a variety of applications, including autonomous navigation, vessel classification, and more."
+              body="Use data collected from our network of vessels to train AI/ML models for applications such as autonomous navigation or vessel classification."
               image={train_data}
               width="250px"
             />
             <Card2
               title="Reduce Emissions"
-              body="Comply with IMO regulations and reduce your carbon footprint. Marview’s data can be used to calculate emissions and fuel consumption, and to monitor compliance with regulations."
+              body="Comply with IMO regulations and reduce your carbon footprint. Use our data to calculate emissions and monitor compliance with regulations."
               image={co2_savings}
               width="250px"
             />

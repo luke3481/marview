@@ -11,6 +11,7 @@ export const CardContainer = styled.div`
   @media screen and (min-width: 769px) {
     &:hover {
       transform: translate(0, -10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
   }
 `;

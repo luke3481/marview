@@ -1,38 +1,32 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ship_topview from "../../imgs/ship_topview.jpg";
-import wave from "../../imgs/wave.png";
 
 export const PageContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 768px) {
-    background: url(${ship_topview});
-    background-postion: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    padding-top: 60px;
+    background: black;
   }
 `;
 
 export const HeadlineContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically and horizontally */
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  gap: 20px;
   width: 60%;
-  margin-left: 10%;
-  margin-top: 10%;
-  @media screen and (max-width: 768px) {
-    width: 90%;
-    margin-top: 10%;
-  }
+  padding: 25px;
+  margin: auto;
 `;
 
 export const Title = styled.h1`
   color: #fff;
-  font-size: 5rem;
-  text-align: left;
+  font-size: 4rem;
+  text-align: center;
   margin-bottom: 0;
   margin-top: 0;
   @media screen and (max-width: 768px) {
@@ -52,10 +46,10 @@ export const Video = styled.video`
 `;
 
 export const Demo = styled(Link)`
-  padding: 15px 50px;
-  border-radius: 25px;
+  padding: 20px 60px;
+  border-radius: 40px;
   border: 1px solid #4d4dff;
-  font-size: 1 rem;
+  font-size: 1.5rem;
   text-decoration: none;
   font-weight: 500;
   width: 150px;
@@ -115,10 +109,11 @@ export const ContentContainer3 = styled.div`
 `;
 
 export const SubContainer = styled.div`
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin-left: 10%;
+  width: 70%;
+  margin-left: 15%;
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -162,16 +157,41 @@ export const CardContainer = styled.div`
   & > * {
     flex-basis: 100%; /* You can adjust the width value as needed */
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 850px) {
     flex-direction: column;
     gap: 25px;
   }
 `;
 
-export const Subtitle = styled.h3`
+export const Subtitle = styled.h1`
   color: black;
-  font-size: 2.5rem;
+  // font-weight: 600;
+  font-size: 3rem;
   @media screen and (max-width: 768px) {
     text-align: center;
   }
 `;
+
+export const Checklist = styled.ul`
+  list-style: none;
+  padding-left: 20px;
+`;
+
+export const ListItem = styled.li`
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+`;
+
+export const Checkmark = styled.img`
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+`;
+
+export const LaptopImage = styled.img`
+  width: 50%;
+`;
+
