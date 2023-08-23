@@ -18,16 +18,13 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  @media screen and (min-width: 769px) {
-    &:hover {
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      border: 1px solid #4d4dff;
-      background: #fff;
-    }
-    &:hover ${CardImage} {
-      filter: brightness(100%) sepia(100%) saturate(800%) hue-rotate(200deg);
-    }
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4d4dff;
+    background: #fff;
+  }
+  &:hover ${CardImage} {
+    filter: brightness(100%) sepia(100%) saturate(800%) hue-rotate(200deg);
   }
 `;
 

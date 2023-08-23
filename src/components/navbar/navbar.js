@@ -109,7 +109,18 @@ function Navbar({ currentPage }) {
                 Contact
               </NavLink>
             </li>
-            <li
+            <li className="nav-items">
+              <NavLink
+                to="/livemap"
+                className="nav-links"
+                onClick={closeMobileMenu}
+                style={{ color: navLinksColor }}
+              >
+                {" "}
+                Live Map
+              </NavLink>
+            </li>
+            {/* <li
               className="nav-items"
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
@@ -127,7 +138,7 @@ function Navbar({ currentPage }) {
                 />
                 {dropdown && <ProductMenu />}
               </NavLink>
-            </li>
+            </li> */}
             {/* <li
               className="nav-items"
               onMouseEnter={onMouseProfileEnter}

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import about from "../../imgs/about.png";
 import wave from "../../imgs/wave.png";
 
 export const PageContainer = styled.div`
@@ -74,22 +73,27 @@ export const PageContainer = styled.div`
 `;
 
 export const SubContainer = styled.div`
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 30px;
-  width: 80%;
-  margin-left: 10%;
+  flex-direction: column;
+  width: 70%;
   @media screen and (max-width: 768px) {
+    justify-content: center;
     width: 90%;
-    margin-left: 5%;
-    margin-bottom: 30px;
   }
 `;
 
 export const ContentContainer1 = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    padding: 20px 0px 20px 0px;
+  }
 `;
 
 export const ContentContainer2 = styled.div`

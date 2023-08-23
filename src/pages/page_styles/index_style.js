@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+import geo from "../../imgs/geo_background.jpeg";
+import hero from "../../imgs/hero-bg.png";
 
 export const PageContainer = styled.div`
   min-height: 100vh;
@@ -79,6 +81,7 @@ export const Demo = styled(Link)`
   }
   @media screen and (max-width: 768px) {
     width: 100px;
+    font-size: 1.2rem;
   }
 `;
 
@@ -92,6 +95,7 @@ export const Video2 = styled.video`
 export const ContentContainer1 = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   background-color: #fff;
   padding-bottom: 30px;
@@ -103,8 +107,11 @@ export const ContentContainer1 = styled.div`
 export const ContentContainer2 = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  background-color: #f8f8f8;
+  background-image: url(${geo}),
+    linear-gradient(140deg, #00008b 0%, #7282f4 100%);
+  background-blend-mode: overlay;
   padding-bottom: 30px;
   @media screen and (max-width: 768px) {
     padding: 20px 0px 20px 0px;
@@ -114,8 +121,11 @@ export const ContentContainer2 = styled.div`
 export const ContentContainer3 = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  background-color: #fff;
+  background-image: url(${hero});
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-bottom: 30px;
   @media screen and (max-width: 768px) {
     padding: 20px 0px 20px 0px;
@@ -123,13 +133,14 @@ export const ContentContainer3 = styled.div`
 `;
 
 export const SubContainer = styled.div`
-  padding-top: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   width: 70%;
-  margin-left: 15%;
   @media screen and (max-width: 768px) {
     justify-content: center;
+    width: 90%;
   }
 `;
 
@@ -177,13 +188,12 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const Subtitle = styled.h1`
+export const Subtitle = styled.div`
   color: black;
-  // font-weight: 600;
+  font-weight: 700;
   font-size: 3rem;
-  @media screen and (max-width: 768px) {
-    text-align: center;
-  }
+  text-align: center;
+  padding-bottom: 75px;
 `;
 
 export const Checklist = styled.ul`
@@ -238,7 +248,7 @@ export const LaptopImage = styled.img`
   object-fit: contain;
   animation: ${rotateAnimation} 5s ease-in-out infinite;
   @media screen and (max-width: 768px) {
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    animation: none;
   }
 `;

@@ -14,8 +14,6 @@ import {
   SubContainer,
   SubContainer2,
   CardContainer,
-  TextBody,
-  TextBody2,
   Checklist,
   ListItem,
   Checkmark,
@@ -23,8 +21,6 @@ import {
   LaptopImage
 } from "./page_styles/index_style.js";
 import landing_video from "../imgs/landing_video.mp4";
-import before from "../imgs/ais_only.png";
-import after from "../imgs/ais_andradar.png";
 import fuel_savings from "../imgs/fuel_savings.svg";
 import co2_savings from "../imgs/co2_savings.svg";
 import train_data from "../imgs/train_data.svg";
@@ -32,7 +28,6 @@ import domain_awareness from "../imgs/domain_awareness.svg";
 import Card from "../components/other/card";
 import Card2 from "../components/other/card2";
 import Card3 from "../components/other/card3";
-import info_video from "../imgs/info_video.mp4";
 import polsky from "../imgs/polsky.png";
 import origin from "../imgs/origin.png";
 import danalec from "../imgs/danalec.png";
@@ -123,26 +118,9 @@ function Home() {
           </CardContainer>
         </SubContainer>
       </ContentContainer1>
-      <ContentContainer1>
-        <SubContainer>
-          <Subtitle>Charting New Opportunities</Subtitle>
-          <SubContainer2>
-            <TextBody>
-              <p>
-                We’re focused on building solutions that get actionable insights
-                into the hands of those who need it. By leveraging open-source
-                data, existing sensor capabilities, and our own domain
-                experience, we build mission-essential applications unmatched by
-                traditional enterprise software providers.
-              </p>
-            </TextBody>
-            <Video2 src={info_video} autoPlay loop muted playsinline />
-          </SubContainer2>
-        </SubContainer>
-      </ContentContainer1>
       <ContentContainer2>
         <SubContainer>
-          <Subtitle>Our Investors & Partners</Subtitle>
+          <Subtitle style={{color: 'white'}}>Our Investors & Partners</Subtitle>
           <CardContainer>
             <Card image={polsky} partner='https://polsky.uchicago.edu/'/>
             <Card image={origin} partner='https://www.originventures.com/'/>
