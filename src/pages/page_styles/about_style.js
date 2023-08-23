@@ -128,3 +128,19 @@ export const Title = styled.h3`
   text-align: center;
   margin-bottom: 2rem;
 `;
+
+export const Video2 = styled.video`
+  width: 60%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const Subtitle = styled.h1`
+  color: black;
+  // font-weight: 600;
+  font-size: 3rem;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+`;

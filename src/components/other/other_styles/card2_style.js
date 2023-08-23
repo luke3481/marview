@@ -12,8 +12,8 @@ export const CardImage = styled.div`
 
 export const CardContainer = styled.div`
   border-radius: 10px;
-  background: #f8f8f8;
-  border: 1px solid #f8f8f8;
+  background: #e6f5ff;
+  border: 1px solid #e6f5ff;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,7 @@ export const CardContainer = styled.div`
     &:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       border: 1px solid #4d4dff;
+      background: #fff;
     }
     &:hover ${CardImage} {
       filter: brightness(100%) sepia(100%) saturate(800%) hue-rotate(200deg);

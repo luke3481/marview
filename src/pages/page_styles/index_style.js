@@ -1,12 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 
 export const PageContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 768px) {
-    background: black;
+`;
+
+const fadeInAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 `;
 
@@ -19,8 +28,10 @@ export const HeadlineContainer = styled.div`
   padding: 25px;
   gap: 20px;
   width: 60%;
-  padding: 25px;
   margin: auto;
+  animation: ${fadeInAnimation} ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 `;
 
 export const Title = styled.h1`
@@ -40,9 +51,9 @@ export const Video = styled.video`
   position: absolute;
   object-fit: cover;
   z-index: -1;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  // @media screen and (max-width: 768px) {
+  //   display: none;
+  // }
 `;
 
 export const Demo = styled(Link)`
@@ -65,6 +76,9 @@ export const Demo = styled(Link)`
     border: 1px solid #00008b;
     transition: all 0.2s ease-in;
     text-decoration: none;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100px;
   }
 `;
 
@@ -123,6 +137,7 @@ export const SubContainer2 = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -149,7 +164,6 @@ export const TextBody2 = styled.div`
 
 export const CardContainer = styled.div`
   display: flex;
-  flex-wrap: column-wrap;
   gap: 15px;
   justify-content: space-between;
   margin-top: 16px;
@@ -174,24 +188,57 @@ export const Subtitle = styled.h1`
 
 export const Checklist = styled.ul`
   list-style: none;
-  padding-left: 20px;
+  padding-left: 50px;
 `;
 
 export const ListItem = styled.li`
   display: flex;
   align-items: center;
-  padding-left: 40px;
   margin-bottom: 10px;
   font-size: 1.5rem;
+`;
+
+export const CheckmarkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  margin-right: 20px;
 `;
 
 export const Checkmark = styled.img`
   width: 24px;
   height: 24px;
-  margin-right: 20px;
+`;
+
+const rotateAnimation = keyframes`
+  0% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(500px) rotateY(5deg);
+  }
+  50% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+  75% {
+    transform: perspective(500px) rotateY(-5deg);
+  }
+  100% {
+    transform: perspective(500px) rotateY(0deg);
+  }
 `;
 
 export const LaptopImage = styled.img`
   width: 50%;
+  height: auto;
+  object-fit: contain;
+  animation: ${rotateAnimation} 5s ease-in-out infinite;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin-left: 5%;
+  }
 `;
-

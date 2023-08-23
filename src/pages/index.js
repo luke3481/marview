@@ -19,6 +19,7 @@ import {
   Checklist,
   ListItem,
   Checkmark,
+  CheckmarkWrapper,
   LaptopImage
 } from "./page_styles/index_style.js";
 import landing_video from "../imgs/landing_video.mp4";
@@ -33,6 +34,8 @@ import Card2 from "../components/other/card2";
 import Card3 from "../components/other/card3";
 import info_video from "../imgs/info_video.mp4";
 import polsky from "../imgs/polsky.png";
+import origin from "../imgs/origin.png";
+import danalec from "../imgs/danalec.png";
 import laptop from "../imgs/laptop.png";
 import checkmark from "../imgs/checkmark.png";
 import Footer from "../components/footer/footer";
@@ -47,37 +50,53 @@ function Home() {
           <Demo to="/livemap">Try Map</Demo>
         </HeadlineContainer>
       </PageContainer>
-      <ContentContainer2>
+      <ContentContainer1>
         <SubContainer>
-          <Subtitle>All the data you need. In one place.</Subtitle>
+          <Subtitle>Everything you need. In one place.</Subtitle>
           <SubContainer2>
             <Checklist>
               <ListItem>
+                <CheckmarkWrapper>
                   <Checkmark src={checkmark} />
+                </CheckmarkWrapper>
                 AIS
               </ListItem>
               <ListItem>
-                <Checkmark src={checkmark} />
+                <CheckmarkWrapper>
+                  <Checkmark src={checkmark} />
+                </CheckmarkWrapper>
                 Weather
               </ListItem>
               <ListItem>
-                <Checkmark src={checkmark} />
-                Pressure
-              </ListItem>
-              <ListItem>
-                <Checkmark src={checkmark} />
+                <CheckmarkWrapper>
+                  <Checkmark src={checkmark} />
+                </CheckmarkWrapper>
                 Currents
               </ListItem>
               <ListItem>
-                <Checkmark src={checkmark} />
-                ENC
+                <CheckmarkWrapper>
+                  <Checkmark src={checkmark} />
+                </CheckmarkWrapper>
+                Pressure
+              </ListItem>
+              <ListItem>
+                <CheckmarkWrapper>
+                  <Checkmark src={checkmark} />
+                </CheckmarkWrapper>
+                Historical Trends
+              </ListItem>
+              <ListItem>
+                <CheckmarkWrapper>
+                  <Checkmark src={checkmark} />
+                </CheckmarkWrapper>
+                ENCs
               </ListItem>
             </Checklist>
             <LaptopImage src={laptop} alt="marview laptop" />
           </SubContainer2>
         </SubContainer>
-      </ContentContainer2>
-      <ContentContainer2>
+      </ContentContainer1>
+      <ContentContainer1>
         <SubContainer>
           <Subtitle>Extending the possibilities of marine data</Subtitle>
           <CardContainer>
@@ -85,29 +104,25 @@ function Home() {
               title="Optimize Routing"
               body="Marview’s data can be used to optimize routes, reduce fuel consumption, and avoid congestion, leading to significant savings."
               image={fuel_savings}
-              width="250px"
             />
             <Card2
               title="Domain Awareness"
               body="Task assets more effectively, monitor sea lines of communication, and illuminate dark ships and other vessels attempting to avoid detection."
               image={domain_awareness}
-              width="250px"
             />
             <Card2
               title="AI/ML Training Data"
               body="Use data collected from our network of vessels to train AI/ML models for applications such as autonomous navigation or vessel classification."
               image={train_data}
-              width="250px"
             />
             <Card2
               title="Reduce Emissions"
               body="Comply with IMO regulations and reduce your carbon footprint. Use our data to calculate emissions and monitor compliance with regulations."
               image={co2_savings}
-              width="250px"
             />
           </CardContainer>
         </SubContainer>
-      </ContentContainer2>
+      </ContentContainer1>
       <ContentContainer1>
         <SubContainer>
           <Subtitle>Charting New Opportunities</Subtitle>
@@ -127,10 +142,11 @@ function Home() {
       </ContentContainer1>
       <ContentContainer2>
         <SubContainer>
-          <Subtitle>Our Investors and Partners</Subtitle>
+          <Subtitle>Our Investors & Partners</Subtitle>
           <CardContainer>
-            <Card2 image={polsky} width="100%" />
-            <Card2 image={domain_awareness} width="250px" />
+            <Card image={polsky} partner='https://polsky.uchicago.edu/'/>
+            <Card image={origin} partner='https://www.originventures.com/'/>
+            <Card image={danalec} partner='https://www.danelec.com/'/>
           </CardContainer>
         </SubContainer>
       </ContentContainer2>
