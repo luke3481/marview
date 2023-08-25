@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useFormspark } from "@formspark/use-formspark";
 import {
   PageContainer,
   Title,
@@ -18,7 +18,13 @@ import {
   ListItem,
   Checkmark,
   CheckmarkWrapper,
-  LaptopImage
+  LaptopImage,
+  StayInTouchSection,
+  StayInTouchHeading,
+  StayInTouchDescription,
+  FormInput,
+  FormButton,
+  ContactForm,
 } from "./page_styles/index_style.js";
 import landing_video from "../imgs/landing_video.mp4";
 import fuel_savings from "../imgs/fuel_savings.svg";
@@ -35,7 +41,22 @@ import laptop from "../imgs/laptop.png";
 import checkmark from "../imgs/checkmark.png";
 import Footer from "../components/footer/footer";
 
+const FORMSPARK_FORM_ID = "ky7eYulK";
+
 function Home() {
+  const [submit, submitting] = useFormspark({
+    formId: FORMSPARK_FORM_ID,
+  });
+
+  const [email, setEmail] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    await submit({ email });
+    setShowMessage(true);
+  };
+
   return (
     <>
       <PageContainer>
@@ -91,6 +112,32 @@ function Home() {
           </SubContainer2>
         </SubContainer>
       </ContentContainer1>
+      <StayInTouchSection>
+        <StayInTouchHeading>Stay In Touch</StayInTouchHeading>
+        <StayInTouchDescription>
+          Be the first to know about product updates!
+        </StayInTouchDescription>
+                  {showMessage ? (
+            <StayInTouchDescription>
+              <p>You're on the list!</p>
+            </StayInTouchDescription>
+          ) : (
+          <ContactForm onSubmit={onSubmit}>
+            <FormInput
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <FormButton type="submit" disabled={submitting}>
+              {submitting ? "Submitting..." : "Submit"}
+            </FormButton>
+          </ContactForm>
+          )}
+      </StayInTouchSection>
       <ContentContainer1>
         <SubContainer>
           <Subtitle>Extending the possibilities of marine data</Subtitle>
@@ -120,11 +167,13 @@ function Home() {
       </ContentContainer1>
       <ContentContainer2>
         <SubContainer>
-          <Subtitle style={{color: 'white'}}>Our Investors & Partners</Subtitle>
+          <Subtitle style={{ color: "white" }}>
+            Our Investors & Partners
+          </Subtitle>
           <CardContainer>
-            <Card image={polsky} partner='https://polsky.uchicago.edu/'/>
-            <Card image={origin} partner='https://www.originventures.com/'/>
-            <Card image={danalec} partner='https://www.danelec.com/'/>
+            <Card image={polsky} partner="https://polsky.uchicago.edu/" />
+            <Card image={origin} partner="https://www.originventures.com/" />
+            <Card image={danalec} partner="https://www.danelec.com/" />
           </CardContainer>
         </SubContainer>
       </ContentContainer2>

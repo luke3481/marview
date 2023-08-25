@@ -109,8 +109,7 @@ function Product() {
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Temperature">
             <TileLayer
-              // url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
-              url={`http://t1.openseamap.org/seamark/{z}/{x}/{y}.png`}
+              url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
             />
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Wind">

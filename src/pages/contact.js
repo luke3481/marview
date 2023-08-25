@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useFormspark } from "@formspark/use-formspark";
-import Footer from "../components/footer/footer.js"
+import Footer from "../components/footer/footer.js";
 
 import {
   PageContainer,
   ContactContainer,
   ContactForm,
-  FormLabel,
   FormInput,
   FormTextArea,
   FormButton,

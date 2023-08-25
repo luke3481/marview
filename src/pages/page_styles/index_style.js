@@ -252,3 +252,56 @@ export const LaptopImage = styled.img`
     animation: none;
   }
 `;
+
+export const StayInTouchSection = styled.section`
+  background-color: black;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: center;
+`;
+
+export const StayInTouchHeading = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+`;
+
+export const StayInTouchDescription = styled.p`
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: white;
+`;
+
+export const FormInput = styled.input`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+`;
+
+export const FormButton = styled.button`
+  padding: 10px 20px;
+  background-color: #4d4dff;
+  border: 1px solid #4d4dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  width: 100px;
+  &:hover {
+    background: #fff;
+    color: #00008b;
+    border: 1px solid #00008b;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+  }
+`;
+
+export const ContactForm = styled.form`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;

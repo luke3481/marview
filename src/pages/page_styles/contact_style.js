@@ -75,12 +75,10 @@ export const PageContainer = styled.div`
 export const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
-  // background: #fff;
-  // border-radius: 25px;
-  // padding-bottom: 20px;
-  // padding: 20px;
+  align-items: center;
   @media screen and (max-width: 768px) {
-    // padding: 10px;
+    flex-direction: column;
+    padding-bottom: 75px;
   }
 `;
 
@@ -102,17 +100,8 @@ export const ContactForm = styled.form`
   border-radius: 25px;
   padding: 40px;
   width: 50%;
-`;
-
-export const FormLabel = styled.label`
-  font-weight: 500;
-  margin-bottom: 5px;
-  display: inline-block;
-  color: #00008b;
-  // width: 49%;
-
   @media screen and (max-width: 768px) {
-    width: 100%;
+    width: 80%;
   }
 `;
 
@@ -124,7 +113,6 @@ export const FormInput = styled.input`
   margin-bottom: 15px;
   font: inherit;
   display: inline-block;
-  // width: 49%;
 
   &:focus {
     outline: none;
