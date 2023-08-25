@@ -193,7 +193,7 @@ export const Subtitle = styled.div`
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
 `;
 
 export const Checklist = styled.ul`

@@ -37,10 +37,10 @@ function Navbar({ currentPage }) {
       console.log("Scroll Position:", scrollPosition);
       console.log("Current Page:", currentPage);
 
-      if (scrollPosition > 60 && currentPage !== "product") {
-        setNavbarBackground("white");
-      } else {
+      if (scrollPosition < 60) {
         setNavbarBackground("transparent");
+      } else {
+        setNavbarBackground("white");
       }
     };
 
@@ -112,7 +112,7 @@ function Navbar({ currentPage }) {
             <li className="nav-items">
               <NavLink
                 to="/livemap"
-                className="nav-links"
+                className="nav-link-map"
                 onClick={closeMobileMenu}
                 style={{ color: navLinksColor }}
               >

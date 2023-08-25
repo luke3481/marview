@@ -2,7 +2,11 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
 import Roadmap from "./pages/roadmap";
@@ -14,9 +18,11 @@ import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 
 function App() {
+  const currentPage = window.location.pathname;
+
   return (
     <Router>
-      <Navbar currentPage={window.location.pathname.slice(1)} />
+      <Navbar currentPage={currentPage} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/livemap" element={<Product />} />

@@ -6,7 +6,7 @@ export const Container = styled.footer`
   width: 100%;
   min-height: 400px;
   display: flex;
-  background: #00008b;
+  background: #00008b linear-gradient(140deg, #00008b 0%, #7282f4 100%);
   flex-direction: column;
   justify-content: space-between;
   padding-top: 100px;

@@ -86,7 +86,7 @@ function Product() {
               attribution='&copy; <a href="https://www.marinetraffic.com/en/ais/home/centerx:-86.8/centery:25.3/zoom:6">MarineTraffic</a>'
             />
           </LayersControl.Overlay>
-          <LayersControl.Overlay name="Radar (demo)">
+          {/* <LayersControl.Overlay name="Radar (demo)">
             <LayerGroup>
               {vdrData.map((vdr) => (
                 <Circle
@@ -96,7 +96,7 @@ function Product() {
                 ></Circle>
               ))}
             </LayerGroup>
-          </LayersControl.Overlay>
+          </LayersControl.Overlay> */}
           <LayersControl.Overlay name="Precipitation">
             <TileLayer
               url={`https://tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png?appid=${API_KEY}`}
@@ -109,7 +109,8 @@ function Product() {
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Temperature">
             <TileLayer
-              url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
+              // url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`}
+              url={`http://t1.openseamap.org/seamark/{z}/{x}/{y}.png`}
             />
           </LayersControl.Overlay>
           <LayersControl.Overlay name="Wind">

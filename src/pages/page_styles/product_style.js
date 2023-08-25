@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { TileLayer } from "react-leaflet";
 
 export const PageContainer = styled.div`
-  background-color: #f8f8f8;
+  background-color: black;
   padding-top: 60px;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `;
