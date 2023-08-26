@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useFormspark } from "@formspark/use-formspark";
 import {
   PageContainer,
@@ -57,10 +57,14 @@ function Home() {
     setShowMessage(true);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <PageContainer>
-        <Video src={landing_video} autoPlay loop muted playsinline />
+        <Video src={landing_video} autoPlay={window.innerWidth > 768} loop muted playsinline />
         <HeadlineContainer>
           <Title>The future of maritime navigation.</Title>
           <Demo to="/livemap">Try Map</Demo>
@@ -117,11 +121,11 @@ function Home() {
         <StayInTouchDescription>
           Be the first to know about product updates!
         </StayInTouchDescription>
-                  {showMessage ? (
-            <StayInTouchDescription>
-              <p>You're on the list!</p>
-            </StayInTouchDescription>
-          ) : (
+        {showMessage ? (
+          <StayInTouchDescription>
+            <p>You're on the list!</p>
+          </StayInTouchDescription>
+        ) : (
           <ContactForm onSubmit={onSubmit}>
             <FormInput
               type="email"
@@ -136,9 +140,9 @@ function Home() {
               {submitting ? "Submitting..." : "Submit"}
             </FormButton>
           </ContactForm>
-          )}
+        )}
       </StayInTouchSection>
-      <ContentContainer1>
+      {/* <ContentContainer1>
         <SubContainer>
           <Subtitle>Extending the possibilities of marine data</Subtitle>
           <CardContainer>
@@ -179,7 +183,7 @@ function Home() {
       </ContentContainer2>
       <ContentContainer3>
         <SubContainer>
-          <Subtitle>The Right Team</Subtitle>
+          <Subtitle>Our Team</Subtitle>
           <CardContainer>
             <Card3
               image="https://media.licdn.com/dms/image/C5603AQHet13bA04rHA/profile-displayphoto-shrink_800_800/0/1658165403601?e=1697673600&v=beta&t=F9eXzySx13lNOdet_lH-WQIJ6pVRz2pM69nRbV1FgK4"
@@ -206,14 +210,14 @@ function Home() {
               image="https://media.licdn.com/dms/image/C4E03AQGLuKdnOGJ7PA/profile-displayphoto-shrink_800_800/0/1601662991034?e=1697673600&v=beta&t=qHwEA-cthGTcFKloD0JsZVKTl0a-a-xlE0jyA7VzdJg"
               name="Samuel Kevetter"
               position="Product"
-              description=""
+              description="Samuel is a licensed Merchant Marine Officer with an unlimited tonnage Chief Mate License upon ocean with six years of professional sailing experience, and a Strategic Sealift Officer in the US Navy. He is finishing a Masters in Computer Science with a specialization in Artificial Intelligence at SMU, and, most recently, worked as a software engineer at Amazon."
               linkedinUrl="https://www.linkedin.com/in/samuel-kevetter/"
             />
             <Card3
               image="https://media.licdn.com/dms/image/C4E03AQGb6ZenELP5ZA/profile-displayphoto-shrink_800_800/0/1637039684055?e=1697673600&v=beta&t=ef3_Uy1jIxiJ4CZe98qPzgdJuQbK-nZDoKYf7YUSusw"
               name="Luke Birch"
               position="Product"
-              description="Luke has several years of product development experience at large SaaS and financial technology companies. Additionally, Luke served four years as a US Army armor officer, leading platoons of 40+ soldiers. He holds an MBA and Master’s in Computer Science from the University of Chicago."
+              description="Luke has several years of product development experience at large SaaS and financial technology companies. Additionally, Luke served four years as a US Army armor officer, leading platoons of 40+ soldiers. He holds an MBA and Masters in Computer Science from the University of Chicago."
               linkedinUrl="https://www.linkedin.com/in/luke-birch/"
             />
           </CardContainer>
@@ -221,7 +225,7 @@ function Home() {
             Learn More
           </Demo>
         </SubContainer>
-      </ContentContainer3>
+      </ContentContainer3> */}
       <Footer />
     </>
   );

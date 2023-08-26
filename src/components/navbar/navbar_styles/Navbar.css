@@ -90,6 +90,10 @@
   display: none;
 }
 
+.link-color {
+  color: white;
+}
+
 @media screen and (max-width: 768px) {
   .nav-side-menu {
     display: flex;
@@ -149,4 +153,8 @@
     align-self: center;
     padding: 1.5rem;
   }
+
+  .link-color {
+    color: #00008b;
+}
 }

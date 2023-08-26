@@ -80,30 +80,26 @@ function Navbar({ currentPage }) {
             <li className="nav-items">
               <NavLink
                 to="/about"
-                className="nav-links"
+                // className="nav-links"
+                className={`nav-links ${
+                  navbarBackground === "transparent" ? "link-color" : ""
+                }`}
                 onClick={closeMobileMenu}
-                style={{ color: navLinksColor }}
+                // style={{ color: navLinksColor }}
               >
                 {" "}
                 About
               </NavLink>
             </li>
-            {/* <li className="nav-items">
-              <NavLink
-                to="/roadmap"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                {" "}
-                Roadmap
-              </NavLink>
-            </li> */}
             <li className="nav-items">
               <NavLink
                 to="/contact"
-                className="nav-links"
+                // className="nav-links"
+                className={`nav-links ${
+                  navbarBackground === "transparent" ? "link-color" : ""
+                }`}
                 onClick={closeMobileMenu}
-                style={{ color: navLinksColor }}
+                // style={{ color: navLinksColor }}
               >
                 {" "}
                 Contact
@@ -113,8 +109,11 @@ function Navbar({ currentPage }) {
               <NavLink
                 to="/livemap"
                 className="nav-link-map"
+                className={`nav-link-map ${
+                  navbarBackground === "transparent" ? "link-color" : ""
+                }`}
                 onClick={closeMobileMenu}
-                style={{ color: navLinksColor }}
+                // style={{ color: navLinksColor }}
               >
                 {" "}
                 Live Map

@@ -53,9 +53,6 @@ export const Video = styled.video`
   position: absolute;
   object-fit: cover;
   z-index: -1;
-  // @media screen and (max-width: 768px) {
-  //   display: none;
-  // }
 `;
 
 export const Demo = styled(Link)`
@@ -115,6 +112,7 @@ export const ContentContainer2 = styled.div`
   padding-bottom: 30px;
   @media screen and (max-width: 768px) {
     padding: 20px 0px 20px 0px;
+    background-image: -webkit-linear-gradient(140deg, #00008b 0%, #7282f4 100%);
   }
 `;
 
@@ -304,4 +302,8 @@ export const ContactForm = styled.form`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-left: 10%;
+  }
 `;
