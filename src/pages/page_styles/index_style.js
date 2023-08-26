@@ -4,9 +4,12 @@ import geo from "../../imgs/geo_background.jpeg";
 import hero from "../../imgs/hero-bg.png";
 
 export const PageContainer = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    background: black;
+  }
 `;
 
 const fadeInAnimation = keyframes`
@@ -25,7 +28,7 @@ export const HeadlineContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center vertically and horizontally */
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 25px;
   gap: 20px;
