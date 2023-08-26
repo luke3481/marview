@@ -56,6 +56,9 @@ export const Video = styled.video`
   position: absolute;
   object-fit: cover;
   z-index: -1;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Demo = styled(Link)`
