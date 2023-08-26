@@ -37,6 +37,12 @@ export const HeadlineContainer = styled.div`
   animation: ${fadeInAnimation} ease 4s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  @media screen and (max-width: 768px) {
+    height: calc(
+      100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top)
+    );
+    animation: none;
+  }
 `;
 
 export const Title = styled.h1`
