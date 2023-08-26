@@ -35,12 +35,12 @@ function About() {
           <div class="air air3"></div>
           <div class="air air4"></div>
         </section>
-        <ContentContainer1>
+        {/* <ContentContainer1>
           <SubContainer>
             <Subtitle>Charting New Opportunities</Subtitle>
             <SubContainer></SubContainer>
           </SubContainer>
-        </ContentContainer1>
+        </ContentContainer1> */}
         <ContentContainer1>
           <SubContainer>
             <Subtitle>Extending the possibilities of marine data</Subtitle>
