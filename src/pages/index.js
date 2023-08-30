@@ -64,9 +64,9 @@ function Home() {
   return (
     <>
       <PageContainer>
-        <Video src={landing_video} autoPlay={window.innerWidth > 768} loop muted playsinline />
+        <Video src={landing_video} autoPlay loop muted playsinline />
         <HeadlineContainer>
-          <Title>The future of maritime navigation.</Title>
+          <Title>The Future of Maritime Navigation</Title>
           <Demo to="/livemap">Try Map</Demo>
         </HeadlineContainer>
       </PageContainer>

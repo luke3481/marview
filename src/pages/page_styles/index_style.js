@@ -25,34 +25,53 @@ const fadeInAnimation = keyframes`
 `;
 
 export const HeadlineContainer = styled.div`
+  //Below code is for alternate headline
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // background-color: rgba(0, 0, 0, 0.8);
+  // padding: 25px;
+  // gap: 20px;
+  // width: 60%;
+  // margin: auto;
+  // animation: ${fadeInAnimation} ease 4s;
+  // animation-iteration-count: 1;
+  // animation-fill-mode: forwards;
+  // @media screen and (max-width: 768px) {
+  //   height: calc(
+  //     100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top)
+  //   );
+  //   animation: none;
+  // }
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 25px;
-  gap: 20px;
-  width: 60%;
-  margin: auto;
-  animation: ${fadeInAnimation} ease 4s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  align-items: left;
+  margin-left: 10%;
+  margin-top: 4%;
+  width: 70%;
   @media screen and (max-width: 768px) {
     height: calc(
       100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top)
     );
-    animation: none;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    margin-left: 0;
+    width: auto;
+    margin-top: 0;
   }
 `;
 
 export const Title = styled.h1`
   color: #fff;
   font-size: 4rem;
-  text-align: center;
+  // text-align: center;
   margin-bottom: 0;
-  margin-top: 0;
+  // margin-top: 0;
   @media screen and (max-width: 768px) {
     font-size: 3rem;
+    text-align: center;
   }
 `;
 

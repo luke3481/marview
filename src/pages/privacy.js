@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PageContainer, ContentContainer } from "./page_styles/privacy_style.js";
 import Footer from "../components/footer/footer";
 
 function Privacy() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <PageContainer>

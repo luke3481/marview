@@ -39,7 +39,7 @@ export const SubContainer2 = styled.div`
 
 export const ContentContainer = styled.div`
   display: block;
-  max-width: 250px;
+  max-width: 200px;
 `;
 
 export const Text = styled.div`

@@ -4,10 +4,13 @@ import {
   ContentContainer1,
   ContentContainer2,
   SubContainer,
+  SubContainer2,
   Subtitle,
   Demo,
   ContentContainer3,
   CardContainer,
+  CardContainer2,
+  Video
 } from "./page_styles/about_style.js";
 import fuel_savings from "../imgs/fuel_savings.svg";
 import co2_savings from "../imgs/co2_savings.svg";
@@ -19,6 +22,10 @@ import Card3 from "../components/other/card3";
 import polsky from "../imgs/polsky.png";
 import origin from "../imgs/origin.png";
 import danalec from "../imgs/danalec.png";
+import penfed from "../imgs/penfed.png";
+import mts from "../imgs/mts.jpg";
+import ndia from "../imgs/ndia.png";
+import info_video from "../imgs/info_video.mp4";
 import Footer from "../components/footer/footer";
 
 function About() {
@@ -35,12 +42,18 @@ function About() {
           <div class="air air3"></div>
           <div class="air air4"></div>
         </section>
-        {/* <ContentContainer1>
-          <SubContainer>
+        <ContentContainer1>
+          <SubContainer2>
             <Subtitle>Charting New Opportunities</Subtitle>
-            <SubContainer></SubContainer>
-          </SubContainer>
-        </ContentContainer1> */}
+            <Video
+              src={info_video}
+              autoPlay={window.innerWidth > 768}
+              loop
+              muted
+              playsinline
+            />
+          </SubContainer2>
+        </ContentContainer1>
         <ContentContainer1>
           <SubContainer>
             <Subtitle>Extending the possibilities of marine data</Subtitle>
@@ -73,11 +86,17 @@ function About() {
             <Subtitle style={{ color: "white" }}>
               Our Investors & Partners
             </Subtitle>
-            <CardContainer>
+            <CardContainer2>
               <Card image={polsky} partner="https://polsky.uchicago.edu/" />
               <Card image={origin} partner="https://www.originventures.com/" />
+              <Card
+                image={penfed}
+                partner="https://penfedfoundation.org/how-we-help/veip/"
+              />
+              <Card image={ndia} partner="https://www.ndia.org/" />
               <Card image={danalec} partner="https://www.danelec.com/" />
-            </CardContainer>
+              <Card image={mts} partner="https://mtsociety.memberclicks.net/" />
+            </CardContainer2>
           </SubContainer>
         </ContentContainer2>
         <ContentContainer3>
@@ -88,35 +107,30 @@ function About() {
                 image="https://media.licdn.com/dms/image/C5603AQHet13bA04rHA/profile-displayphoto-shrink_800_800/0/1658165403601?e=1697673600&v=beta&t=F9eXzySx13lNOdet_lH-WQIJ6pVRz2pM69nRbV1FgK4"
                 name="Eric O'Neil"
                 position="CEO"
-                description="Eric is a 10-year veteran of the US Marine Corps, where he led teams of 40+ Marines and ended his active duty career as a Special Operations Officer in the Marines’ Special Operations Command, with multiple deployments to Southeast Asia, Africa, and the Middle East. He holds an MBA and Master’s in Computer Science from the University of Chicago."
                 linkedinUrl="https://www.linkedin.com/in/eric-oneil1/"
               />
               <Card3
                 image="https://media.licdn.com/dms/image/C4E03AQF08kiFKJmE_g/profile-displayphoto-shrink_800_800/0/1655156549443?e=1697673600&v=beta&t=SF1gM_OtE3xzd0eGnzsjqtyano09dp9HR6P6pSeSn10"
                 name="Brian Schmid"
                 position="COO"
-                description="Brian is a former US Navy Surface Warfare Officer and has spent 2,000+ hours driving US warships through many of the most congested waters on Earth. He’s received specialized training in high-speed and waterjet ship piloting and is qualified to operate a gas turbine propulsion plant. He holds a BS in finance from UNC-Chapel Hill and is a current MBA student at Chicago Booth."
                 linkedinUrl="https://www.linkedin.com/in/bfschmid/"
               />
               <Card3
                 image="https://media.licdn.com/dms/image/D5603AQFTWpuYSrhcSg/profile-displayphoto-shrink_800_800/0/1685554929219?e=1697673600&v=beta&t=VUxEkd7-i1jMMDnqu_AeIwHrwUoSDGhD1YLkhAdQ_Mk"
                 name="Steven Blake"
                 position="Biz Dev"
-                description="Steven is a licensed Master Mariner with seven years experience operating oil and product tankers around the world. He is also a Strategic Sealift Officer in the U.S. Navy, providing subject matter expertise in Maritime Domain Awareness (MDA). He is currently earning his MBA at Chicago Booth."
                 linkedinUrl="https://www.linkedin.com/in/steven-blake-2016/"
               />
               <Card3
                 image="https://media.licdn.com/dms/image/C4E03AQGLuKdnOGJ7PA/profile-displayphoto-shrink_800_800/0/1601662991034?e=1697673600&v=beta&t=qHwEA-cthGTcFKloD0JsZVKTl0a-a-xlE0jyA7VzdJg"
                 name="Samuel Kevetter"
                 position="Product"
-                description="Samuel is a licensed Merchant Marine Officer with an unlimited tonnage Chief Mate License upon ocean with six years of professional sailing experience, and a Strategic Sealift Officer in the US Navy. He is finishing a Masters in Computer Science with a specialization in Artificial Intelligence at SMU, and, most recently, worked as a software engineer at Amazon."
                 linkedinUrl="https://www.linkedin.com/in/samuel-kevetter/"
               />
               <Card3
                 image="https://media.licdn.com/dms/image/C4E03AQGb6ZenELP5ZA/profile-displayphoto-shrink_800_800/0/1637039684055?e=1697673600&v=beta&t=ef3_Uy1jIxiJ4CZe98qPzgdJuQbK-nZDoKYf7YUSusw"
                 name="Luke Birch"
                 position="Product"
-                description="Luke has several years of product development experience at large SaaS and financial technology companies. Additionally, Luke served four years as a US Army armor officer, leading platoons of 40+ soldiers. He holds an MBA and Masters in Computer Science from the University of Chicago."
                 linkedinUrl="https://www.linkedin.com/in/luke-birch/"
               />
             </CardContainer>

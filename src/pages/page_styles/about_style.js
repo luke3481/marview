@@ -31,11 +31,8 @@ export const Demo = styled(Link)`
   }
 `;
 
-export const Video2 = styled.video`
-  width: 60%;
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
+export const Video = styled.video`
+  width: 100%;
 `;
 
 export const ContentContainer1 = styled.div`
@@ -92,11 +89,12 @@ export const SubContainer = styled.div`
 
 export const SubContainer2 = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
   align-items: center;
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    width: 90%;
   }
 `;
 
@@ -128,8 +126,22 @@ export const CardContainer = styled.div`
   & > * {
     flex-basis: 100%; /* You can adjust the width value as needed */
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 25px;
+  }
+`;
+
+export const CardContainer2 = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 30px;
   @media screen and (max-width: 850px) {
     flex-direction: column;
+    align-items: center;
     gap: 25px;
   }
 `;

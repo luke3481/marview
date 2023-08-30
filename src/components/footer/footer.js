@@ -18,14 +18,13 @@ function Footer() {
         <ContentContainer>
           <Title>About Us</Title>
           <Text>
-            Marview aims to create the world’s highest-quality source of ocean
+            Marview aims to create the world’s highest quality source of ocean
             data, taking the guesswork out of maritime decision making.
           </Text>
         </ContentContainer>
         <ContentContainer>
           <Title>Resources</Title>
           <LinkContainer>
-            <Links to="/roadmap">Roadmap</Links>
             <Links to="/privacy">Privacy</Links>
             <Links to="/terms">Terms</Links>
             <Links to="/contact">Contact</Links>
