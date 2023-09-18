@@ -16,6 +16,7 @@ import {
 import TemperatureLegend from "../components/other/legend_temp.js";
 import MouseCoordinates from "../components/other/mouse_coordinates.js";
 import AISLegend from "../components/other/legend_ais.js";
+import Popup from "../components/other/popup.js";
 import vdrData from "./demo_radar_data.json";
 
 function Product() {
@@ -58,6 +59,7 @@ function Product() {
         scrollWheelZoom={true}
         zoomControl={false}
       >
+        <Popup />
         <LayersControl position="topleft">
           <LayersControl.BaseLayer checked name="Streets">
             <MapTileLayer
