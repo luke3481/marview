@@ -10,7 +10,7 @@ import {
   ContentContainer3,
   CardContainer,
   CardContainer2,
-  Video
+  Video,
 } from "./page_styles/about_style.js";
 import fuel_savings from "../imgs/fuel_savings.svg";
 import co2_savings from "../imgs/co2_savings.svg";
@@ -122,7 +122,7 @@ function About() {
                 linkedinUrl="https://www.linkedin.com/in/steven-blake-2016/"
               />
               <Card3
-                image="https://media.licdn.com/dms/image/C4E03AQGLuKdnOGJ7PA/profile-displayphoto-shrink_800_800/0/1601662991034?e=1697673600&v=beta&t=qHwEA-cthGTcFKloD0JsZVKTl0a-a-xlE0jyA7VzdJg"
+                image="https://media.licdn.com/dms/image/D5603AQGQv7j4ujJ4wg/profile-displayphoto-shrink_800_800/0/1694872850019?e=1700697600&v=beta&t=wVUWozUg2J1z_T3oHFfApjlTglVYpm-6FT3lLVdP8vs"
                 name="Samuel Kevetter"
                 position="Product"
                 linkedinUrl="https://www.linkedin.com/in/samuel-kevetter/"
