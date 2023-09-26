@@ -8,6 +8,11 @@ import {
 } from "./page_styles/profile_style.js";
 import { useAuth0 } from "@auth0/auth0-react";
 
+// TODO:
+// What UX difference is there between authenticated and nonauthenticated flows?
+// How do I login to our auth0 account?
+// How many users have created profiles?
+
 function Profile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 

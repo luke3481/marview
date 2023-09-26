@@ -5,6 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+// TODO: 
+// What are the domain and clientId values used for?
+// What is the risk of them being exposed?
+// Who owns that auth0 account?
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

@@ -12,6 +12,10 @@ import {
   Title,
 } from "./page_styles/contact_style.js";
 
+// TODO:
+// How to access formspark account?
+// What can someone do if they know our form id?
+
 const FORMSPARK_FORM_ID = "2pxnvScI";
 
 function Contact() {

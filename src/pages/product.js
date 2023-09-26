@@ -18,6 +18,16 @@ import MouseCoordinates from "../components/other/mouse_coordinates.js";
 import AISLegend from "../components/other/legend_ais.js";
 import vdrData from "./demo_radar_data.json";
 
+// TODO:
+// The below API keys are now exposed
+// Whose credit card is hooked up to the API provider?
+// Are there rate/cost limits in place?
+// What are the other risks of these keys being exposed, to determine urgency in addressing it?
+
+// TODO:
+// Let's discuss each of the urls below
+// Which ones of those requires accounts?
+
 function Product() {
   // const API_KEY = "06aac0fd4ba239a20d824ef89602f311"; /* alternate api key */
   const API_KEY = "e6d8c9c20269bd6d193a610ab4f7d761";
