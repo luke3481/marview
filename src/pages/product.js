@@ -23,6 +23,8 @@ function Product() {
   // const API_KEY = "06aac0fd4ba239a20d824ef89602f311"; /* alternate api key */
   const API_KEY = "e6d8c9c20269bd6d193a610ab4f7d761";
   const center = [25.1, -84.1];
+  const jan_tiles = "./tiles_jan_22/{z}/{x}/{y}.png";
+
   const [activeLayer, setActiveLayer] = useState(null);
 
   useEffect(() => {
@@ -32,17 +34,17 @@ function Product() {
   function LegendControl() {
     useMapEvents({
       overlayadd: (e) => {
-        if (e.name === "Temperature") {
-          setActiveLayer("Temperature");
-        }
+        // if (e.name === "Temperature") {
+        //   setActiveLayer("Temperature");
+        // }
         if (e.name === "AIS") {
           setActiveLayer("AIS");
         }
       },
       overlayremove: (e) => {
-        if (e.name === "Temperature") {
-          setActiveLayer(null);
-        }
+        // if (e.name === "Temperature") {
+        //   setActiveLayer(null);
+        // }
         if (e.name === "AIS") {
           setActiveLayer(null);
         }
@@ -99,6 +101,9 @@ function Product() {
               ))}
             </LayerGroup>
           </LayersControl.Overlay> */}
+          <LayersControl.Overlay name="Heat Map">
+            <TileLayer url={jan_tiles} />
+          </LayersControl.Overlay>
           <LayersControl.Overlay name="Precipitation">
             <TileLayer
               url={`https://tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png?appid=${API_KEY}`}
@@ -131,7 +136,7 @@ function Product() {
           <MouseCoordinates />
         </div>
         <LegendControl />
-        {activeLayer === "Temperature" && <TemperatureLegend />}
+        {/* {activeLayer === "Temperature" && <TemperatureLegend />} */}
         {activeLayer === "AIS" && <AISLegend />}
       </MapContainer>
     </PageContainer>

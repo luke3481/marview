@@ -116,6 +116,12 @@ function About() {
                 linkedinUrl="https://www.linkedin.com/in/bfschmid/"
               />
               <Card3
+                image="https://media.licdn.com/dms/image/C4E03AQGb6ZenELP5ZA/profile-displayphoto-shrink_800_800/0/1637039684055?e=1697673600&v=beta&t=ef3_Uy1jIxiJ4CZe98qPzgdJuQbK-nZDoKYf7YUSusw"
+                name="Luke Birch"
+                position="CPO"
+                linkedinUrl="https://www.linkedin.com/in/luke-birch/"
+              />
+              <Card3
                 image="https://media.licdn.com/dms/image/D5603AQFTWpuYSrhcSg/profile-displayphoto-shrink_800_800/0/1685554929219?e=1697673600&v=beta&t=VUxEkd7-i1jMMDnqu_AeIwHrwUoSDGhD1YLkhAdQ_Mk"
                 name="Steven Blake"
                 position="Biz Dev"
@@ -126,12 +132,6 @@ function About() {
                 name="Samuel Kevetter"
                 position="Product"
                 linkedinUrl="https://www.linkedin.com/in/samuel-kevetter/"
-              />
-              <Card3
-                image="https://media.licdn.com/dms/image/C4E03AQGb6ZenELP5ZA/profile-displayphoto-shrink_800_800/0/1637039684055?e=1697673600&v=beta&t=ef3_Uy1jIxiJ4CZe98qPzgdJuQbK-nZDoKYf7YUSusw"
-                name="Luke Birch"
-                position="Product"
-                linkedinUrl="https://www.linkedin.com/in/luke-birch/"
               />
             </CardContainer>
             <Demo to="/contact" style={{ "align-self": "end" }}>
