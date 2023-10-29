@@ -12,6 +12,7 @@ import {
   CardContainer2,
   Video,
 } from "./page_styles/about_style.js";
+import info_video from "../imgs/info_video.mp4";
 import fuel_savings from "../imgs/fuel_savings.svg";
 import co2_savings from "../imgs/co2_savings.svg";
 import train_data from "../imgs/train_data.svg";
@@ -25,7 +26,11 @@ import danalec from "../imgs/danalec.png";
 import penfed from "../imgs/penfed.png";
 import mts from "../imgs/mts.jpg";
 import ndia from "../imgs/ndia.png";
-import info_video from "../imgs/info_video.mp4";
+import eric from "../imgs/eric_headshot.jpg";
+import brian from "../imgs/brian_headshot.jpg";
+import luke from "../imgs/luke_headshot.jpg";
+import steve from "../imgs/steve_headshot.jpg";
+import sam from "../imgs/sam_headshot.jpg";
 import Footer from "../components/footer/footer";
 
 function About() {
@@ -104,31 +109,31 @@ function About() {
             <Subtitle>Our Team</Subtitle>
             <CardContainer>
               <Card3
-                image="https://media.licdn.com/dms/image/C5603AQHet13bA04rHA/profile-displayphoto-shrink_800_800/0/1658165403601?e=1697673600&v=beta&t=F9eXzySx13lNOdet_lH-WQIJ6pVRz2pM69nRbV1FgK4"
+                image={eric}
                 name="Eric O'Neil"
                 position="CEO"
                 linkedinUrl="https://www.linkedin.com/in/eric-oneil1/"
               />
               <Card3
-                image="https://media.licdn.com/dms/image/C4E03AQF08kiFKJmE_g/profile-displayphoto-shrink_800_800/0/1655156549443?e=1697673600&v=beta&t=SF1gM_OtE3xzd0eGnzsjqtyano09dp9HR6P6pSeSn10"
+                image={brian}
                 name="Brian Schmid"
                 position="COO"
                 linkedinUrl="https://www.linkedin.com/in/bfschmid/"
               />
               <Card3
-                image="https://media.licdn.com/dms/image/C4E03AQGb6ZenELP5ZA/profile-displayphoto-shrink_800_800/0/1637039684055?e=1697673600&v=beta&t=ef3_Uy1jIxiJ4CZe98qPzgdJuQbK-nZDoKYf7YUSusw"
+                image={luke}
                 name="Luke Birch"
                 position="CPO"
                 linkedinUrl="https://www.linkedin.com/in/luke-birch/"
               />
               <Card3
-                image="https://media.licdn.com/dms/image/D5603AQFTWpuYSrhcSg/profile-displayphoto-shrink_800_800/0/1685554929219?e=1697673600&v=beta&t=VUxEkd7-i1jMMDnqu_AeIwHrwUoSDGhD1YLkhAdQ_Mk"
+                image={steve}
                 name="Steven Blake"
                 position="Biz Dev"
                 linkedinUrl="https://www.linkedin.com/in/steven-blake-2016/"
               />
               <Card3
-                image="https://media.licdn.com/dms/image/D5603AQGQv7j4ujJ4wg/profile-displayphoto-shrink_800_800/0/1694872850019?e=1700697600&v=beta&t=wVUWozUg2J1z_T3oHFfApjlTglVYpm-6FT3lLVdP8vs"
+                image={sam}
                 name="Samuel Kevetter"
                 position="Product"
                 linkedinUrl="https://www.linkedin.com/in/samuel-kevetter/"

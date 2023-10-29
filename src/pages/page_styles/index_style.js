@@ -81,6 +81,7 @@ export const Video = styled.video`
   position: absolute;
   object-fit: cover;
   z-index: -1;
+  display: block;
   @media screen and (max-width: 768px) {
     display: none;
   }
